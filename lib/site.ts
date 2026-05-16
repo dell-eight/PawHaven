@@ -1,0 +1,38 @@
+export const siteConfig = {
+  name: "PawNest",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  description:
+    "Shop cozy and practical pet accessories for cleaner homes, easier walks, travel, grooming, and everyday comfort for dogs and cats.",
+  businessRules: {
+    allowedFocus: [
+      "pet beds",
+      "blankets",
+      "grooming tools",
+      "pet hair removers",
+      "lint rollers",
+      "pet carriers",
+      "collars",
+      "leashes",
+      "harnesses",
+      "toys",
+      "cleaning tools",
+      "pet organization",
+      "safety accessories",
+      "cat and dog home accessories",
+      "scratching posts",
+      "pet mats",
+      "paw cleaners",
+      "car seat covers",
+      "travel accessories",
+    ],
+    excludedProducts: [
+      "pet food",
+      "treats",
+      "supplements",
+      "medicine",
+      "prescription products",
+      "medical devices",
+      "risky health claims",
+    ],
+  },
+} as const;
