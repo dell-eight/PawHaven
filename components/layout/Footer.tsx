@@ -44,9 +44,9 @@ export function Footer() {
               PawHaven helps pet parents create cleaner, cozier, and more
               practical homes with thoughtfully selected pet accessories.
             </p>
-            <p className="site-footer__social-note">
-              Social channels will be linked after PawHaven brand accounts are
-              live.
+            <p className="site-footer__trust-note">
+              Practical comfort, cleanup, cat, and walk essentials with clear
+              product roles and honest shopping expectations.
             </p>
           </div>
 

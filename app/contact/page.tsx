@@ -19,17 +19,33 @@ const supportTopics = [
   "Catalog, care instruction, or product detail questions",
 ];
 
+const supportExpectations = [
+  {
+    title: "Response target",
+    copy: "Once support is active, PawHaven should aim to reply within 24-48 hours on business days.",
+  },
+  {
+    title: "Damaged or wrong items",
+    copy: "Include your order number if available, clear photos of the item and packaging, and a short description of the issue.",
+  },
+  {
+    title: "Sizing questions",
+    copy: "Share the product name, your pet's measurements, and where the item will be used so support can give more useful guidance.",
+  },
+];
+
 export default function ContactPage() {
   return (
     <main>
       <PageHeader
         eyebrow="Support"
         title="Contact PawHaven"
-        description="Have a question about your order, a product, or choosing the right PawHaven essential? Send us a message and we'll help as soon as we can."
+        description="For product questions, order concerns, or support requests, PawHaven aims to keep communication clear and helpful."
       />
 
       <Section tone="white">
         <div className="support-layout">
+          {/* TODO(owner): Connect a real support inbox/form service and confirm the official support email before showing an email address publicly. */}
           <form className="support-form">
             <div className="support-form__field">
               <label htmlFor="name">Name</label>
@@ -51,23 +67,26 @@ export default function ContactPage() {
               Send Message
             </Button>
             <p className="support-form__note">
-              This contact form is not connected yet. Add a support inbox or
-              form service before using it for real customer messages.
+              This message form is being prepared and is not accepting customer
+              messages yet.
             </p>
           </form>
 
           <aside className="support-panel">
             <h2>Support expectations</h2>
             <p>
-              PawHaven support should be clear, friendly, and practical. Include
-              the product name, order number if available, and any sizing or
-              care details that help explain your question.
+              PawHaven support should be clear, friendly, and practical. These
+              expectations will apply once checkout, fulfillment, and support
+              tools are active.
             </p>
-            <p>
-              Checkout and payment are not active yet, so real order support
-              begins after payment and fulfillment are
-              configured.
-            </p>
+            <div className="support-expectation-list">
+              {supportExpectations.map((item) => (
+                <article className="support-expectation-card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.copy}</p>
+                </article>
+              ))}
+            </div>
           </aside>
         </div>
       </Section>
@@ -76,7 +95,7 @@ export default function ContactPage() {
         <SectionHeader
           eyebrow="Common support topics"
           title="Questions PawHaven can help with."
-          description="Use the form for product guidance, sizing checks, care questions, or support policy questions."
+          description="Use support for product guidance, sizing checks, care questions, damaged or wrong item concerns, and policy questions once the support channel is active."
         />
         <div className="support-topic-grid">
           {supportTopics.map((topic) => (

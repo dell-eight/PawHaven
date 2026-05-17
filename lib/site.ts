@@ -1,4 +1,7 @@
 export const siteConfig = {
+  // TODO(owner): Before launch, connect Shopify/payment checkout, confirm the real support email,
+  // finalize shipping timelines, set the return/refund window, add real product photos,
+  // collect real reviews only after customers buy, and configure Meta Pixel, TikTok Pixel, and GA4.
   name: "PawHaven",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description:
