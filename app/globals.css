@@ -2248,6 +2248,292 @@ svg {
   justify-self: start;
 }
 
+@media (max-width: 42rem) {
+  :root {
+    --space-page: clamp(0.9rem, 4vw, 1.15rem);
+    --space-section: clamp(2.75rem, 10vw, 4rem);
+  }
+
+  .announcement-bar {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    padding-block: 0.5rem;
+  }
+
+  .site-header__inner {
+    min-height: 3.85rem;
+    gap: 0.5rem;
+  }
+
+  .site-header__logo,
+  .site-footer__logo {
+    min-height: 2.5rem;
+    font-size: 1.24rem;
+  }
+
+  .site-header__logo::before,
+  .site-footer__logo::before {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.84rem;
+  }
+
+  .mobile-nav__toggle {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .mobile-nav__panel {
+    top: calc(100% + 0.55rem);
+    right: calc(var(--space-page) * -0.25);
+    width: min(21rem, calc(100vw - 1rem));
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    padding: 0.7rem;
+  }
+
+  .mobile-nav__link,
+  .mobile-nav__cart {
+    min-height: 2.9rem;
+    align-items: center;
+    padding: 0.85rem 0.95rem;
+  }
+
+  .page-header {
+    padding-block: clamp(2.75rem, 12vw, 4rem);
+  }
+
+  .section__header {
+    margin-bottom: 1.6rem;
+  }
+
+  .section__title,
+  .page-header__title {
+    font-size: clamp(1.75rem, 10vw, 2.45rem);
+    line-height: 1.08;
+  }
+
+  .section__description,
+  .page-header__description {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .button {
+    min-height: 3rem;
+    padding-block: 0.92rem;
+  }
+
+  .home-hero {
+    padding-block: clamp(2.7rem, 12vw, 4.25rem);
+  }
+
+  .home-hero__inner {
+    gap: 1.65rem;
+  }
+
+  .home-hero__copy {
+    gap: 0.95rem;
+  }
+
+  .home-hero h1 {
+    max-width: 14ch;
+    font-size: clamp(2.28rem, 13vw, 3.4rem);
+    line-height: 0.98;
+  }
+
+  .home-hero__copy p:not(.eyebrow) {
+    font-size: 1.03rem;
+    line-height: 1.55;
+  }
+
+  .home-hero__actions,
+  .cta-section__actions,
+  .category-empty__actions,
+  .not-found-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__actions .button,
+  .cta-section__actions .button,
+  .category-empty__actions .button,
+  .not-found-actions .button,
+  .cta-link-grid .button,
+  .support-faq-cta .button,
+  .policy-support .button,
+  .home-bundle__copy .button {
+    width: 100%;
+  }
+
+  .home-hero__promises,
+  .trust-badges,
+  .home-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__promises span,
+  .trust-badge,
+  .home-benefits span {
+    width: 100%;
+  }
+
+  .home-hero__visual {
+    min-height: 0;
+  }
+
+  .home-hero__scene {
+    min-height: clamp(18rem, 80vw, 22rem);
+  }
+
+  .product-card,
+  .category-card,
+  .review-card,
+  .newsletter-signup,
+  .product-info-panel,
+  .cart-item,
+  .cart-summary,
+  .cart-empty,
+  .support-form,
+  .support-panel,
+  .support-topic-card,
+  .support-faq-cta,
+  .faq-page-section,
+  .policy-notice,
+  .policy-card,
+  .policy-support,
+  .home-solution-card,
+  .home-choice-card {
+    padding: 1rem;
+  }
+
+  .product-card {
+    gap: 0.85rem;
+  }
+
+  .product-card__media {
+    aspect-ratio: 5 / 3.6;
+  }
+
+  .product-visual {
+    min-height: 10.5rem;
+  }
+
+  .product-card__body {
+    grid-template-rows: auto auto auto auto auto;
+  }
+
+  .product-card__title a {
+    min-height: auto;
+  }
+
+  .product-card__summary {
+    -webkit-line-clamp: 2;
+  }
+
+  .product-card__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card__view-button,
+  .product-card__add-button {
+    min-height: 2.9rem;
+    white-space: normal;
+  }
+
+  .shop-browser {
+    gap: 1rem;
+  }
+
+  .shop-browser__toolbar {
+    gap: 0.85rem;
+  }
+
+  .product-hero {
+    padding-block: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .product-hero__inner {
+    gap: 1.5rem;
+  }
+
+  .product-hero__media {
+    aspect-ratio: 1 / 0.82;
+  }
+
+  .product-hero h1 {
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 1;
+  }
+
+  .product-hero__description {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .product-benefits,
+  .product-hero__trust-list,
+  .product-purchase-info {
+    gap: 0.55rem;
+  }
+
+  .product-purchase {
+    max-width: none;
+  }
+
+  .product-purchase-info {
+    max-width: none;
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item__price {
+    align-items: center;
+  }
+
+  .quantity-control {
+    grid-template-columns: 3rem 3rem 3rem;
+  }
+
+  .quantity-control,
+  .quantity-control button,
+  .cart-item__remove,
+  .cart-summary__clear {
+    min-height: 3rem;
+  }
+
+  .support-topic-card {
+    min-height: auto;
+  }
+
+  .policy-table {
+    min-width: 100%;
+  }
+
+  .policy-table th,
+  .policy-table td {
+    padding: 0.85rem;
+  }
+
+  .site-footer__inner {
+    gap: 1.65rem;
+    padding-block: 2rem 1.25rem;
+  }
+
+  .site-footer__top {
+    gap: 1.25rem;
+  }
+
+  .site-footer__links {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .footer-links__link {
+    min-height: 2.5rem;
+  }
+}
+
 .blog-category-labels {
   display: flex;
   flex-wrap: wrap;
@@ -2976,7 +3262,7 @@ svg {
 
 @media (max-width: 42rem) {
   .home-hero__scene {
-    min-height: 21rem;
+    min-height: clamp(18rem, 80vw, 22rem);
   }
 
   .home-hero__note {
@@ -2996,6 +3282,65 @@ svg {
     left: 8%;
     transform: scale(0.84);
     transform-origin: bottom left;
+  }
+
+  .home-hero {
+    padding-block: clamp(2.7rem, 12vw, 4.25rem);
+  }
+
+  .home-hero__inner {
+    gap: 1.65rem;
+  }
+
+  .home-hero__copy {
+    gap: 0.95rem;
+  }
+
+  .home-hero h1 {
+    max-width: 14ch;
+    font-size: clamp(2.28rem, 13vw, 3.4rem);
+    line-height: 0.98;
+  }
+
+  .home-hero__copy p:not(.eyebrow) {
+    font-size: 1.03rem;
+    line-height: 1.55;
+  }
+
+  .home-hero__actions,
+  .cta-section__actions,
+  .category-empty__actions,
+  .not-found-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__actions .button,
+  .cta-section__actions .button,
+  .category-empty__actions .button,
+  .not-found-actions .button,
+  .cta-link-grid .button,
+  .support-faq-cta .button,
+  .policy-support .button,
+  .home-bundle__copy .button {
+    width: 100%;
+  }
+
+  .home-hero__promises,
+  .trust-badges,
+  .home-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__promises span,
+  .trust-badge,
+  .home-benefits span {
+    width: 100%;
+  }
+
+  .home-hero__visual {
+    min-height: 0;
   }
 }
 
