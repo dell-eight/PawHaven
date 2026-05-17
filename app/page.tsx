@@ -63,32 +63,63 @@ const bestSellers = getPublicProducts()
 
 const problemSolutions = [
   {
-    problem: "Pet hair on sofas and blankets",
+    category: "Cleaner Home",
+    href: "/categories/grooming-clean-home",
+    problem: "Fur on sofas, beds, and blankets",
     solution:
-      "Reusable hair tools, grooming gloves, and washable layers help make cleanup feel less scattered.",
+      "Reusable hair removers, grooming gloves, and washable layers help make shared spaces easier to refresh.",
   },
   {
-    problem: "Messy feeding and entryway routines",
+    category: "Cleaner Home",
+    href: "/categories/grooming-clean-home",
+    problem: "Muddy paws after walks",
     solution:
-      "Wipeable mats and paw cleanup accessories support calmer home-care habits after meals and walks.",
+      "Paw cleaners and wipeable mats support calmer entryway routines after rain, park trips, and quick outdoor breaks.",
   },
   {
-    problem: "Cats scratching furniture or stealing window space",
+    category: "Cat Essentials",
+    href: "/categories/cat-essentials",
+    problem: "Cats scratching furniture",
     solution:
-      "Cat-first lounge and perch products give cats dedicated spots to stretch, scratch, watch, and rest.",
+      "Scratch-friendly lounges and cat corners give cats a dedicated place to stretch, scratch, perch, and relax.",
   },
   {
-    problem: "Outings that feel hard to pack for",
+    category: "Cozy Rest",
+    href: "/categories/cozy-comfort",
+    problem: "Pets needing cozy rest spots",
     solution:
-      "Walking and travel accessories keep small essentials ready for quick breaks, car trips, and errands.",
+      "Soft beds and blankets help create a clear comfort zone beside sofas, crates, carriers, and small pet corners.",
+  },
+  {
+    category: "Walk & Travel",
+    href: "/categories/walk-travel",
+    problem: "Walks and travel feel messy",
+    solution:
+      "Walk-ready bottles, carriers, car covers, and organizer bags help keep quick outings less scattered.",
   },
 ];
 
 const whyPawHavenItems = [
-  "Practical products selected for comfort, cleaner homes, cats, and small-space routines.",
-  "A cozy home-first approach for pets and the people who care for them.",
-  "Beginner-friendly essentials that are easy to understand and use.",
-  "A focused catalog without food, medicine, random toys, or risky product claims.",
+  {
+    copy:
+      "We group products by everyday routines: fur cleanup, muddy paws, cozy rest, cat corners, and easier outings.",
+    title: "Curated around real pet-home problems",
+  },
+  {
+    copy:
+      "Every product should be easy to understand, easy to use, and connected to a specific pet-parent problem.",
+    title: "Clear product roles",
+  },
+  {
+    copy:
+      "PawHaven is being prepared with local delivery expectations, clear support, and familiar payment options in mind.",
+    title: "Philippines-friendly shopping experience",
+  },
+  {
+    copy:
+      "We avoid food, medicine, supplements, and medical-style promises. PawHaven focuses on practical accessories only.",
+    title: "No risky pet claims",
+  },
 ];
 
 const benefits = [
@@ -101,9 +132,9 @@ const benefits = [
 ];
 
 const heroPromises = [
-  "Safe accessory categories",
-  "Clear product roles",
-  "Checkout stays honest",
+  "Philippines-focused store",
+  "Comfort, cleanup, cat & walk essentials",
+  "No food, medicine, or risky claims",
 ];
 
 const faqItems = [
@@ -132,16 +163,16 @@ export default function Home() {
           <div className="home-hero__copy">
             <p className="eyebrow">Cozy essentials for happier pets and cleaner homes</p>
             <h1 id="home-hero-title">
-              Build a calmer, cleaner, cozier pet home.
+              Practical pet essentials for cleaner homes and happier pets.
             </h1>
             <p>
-              PawHaven curates focused pet comfort, cat essentials, cleaner-home
-              helpers, and useful outing products for daily life with your pet.
+              PawHaven curates comfort, cleanup, cat essentials, and walk-ready
+              accessories for everyday pet life in the Philippines.
             </p>
             <div className="home-hero__actions">
-              <ButtonLink href="/shop">Shop Featured Picks</ButtonLink>
+              <ButtonLink href="/shop">Shop Best Picks</ButtonLink>
               <ButtonLink href="/categories" variant="secondary">
-                Explore Categories
+                Explore Pet Routines
               </ButtonLink>
             </div>
             <div className="home-hero__promises" aria-label="PawHaven promises">
@@ -206,9 +237,9 @@ export default function Home() {
 
       <Section tone="white">
         <SectionHeader
-          eyebrow="Featured test products"
-          title="The strongest products to validate first."
-          description="These picks have the clearest customer pain points, easiest ad hooks, and best fit with PawHaven's comfort-first positioning."
+          eyebrow="Best PawHaven Picks"
+          title="Start with practical essentials for cleaner homes, cozy rest, and easier pet routines."
+          description="These essentials solve common pet-parent problems like fur on sofas, muddy paws, scratching needs, and travel water breaks."
         />
         <div className="card-grid card-grid--4">
           {bestSellers.map((product) => (
@@ -225,15 +256,22 @@ export default function Home() {
       <Section tone="beige">
         <div className="home-split">
           <SectionHeader
-            eyebrow="Common pet-home problems"
-            title="Less mess, less clutter, more room for cozy routines."
-          description="PawHaven focuses on everyday friction: pet hair, muddy paws, feeding zones, cat furniture needs, travel packing, and pets needing their own soft spaces."
+            eyebrow="Shop by problem"
+            title="Shop by everyday pet-parent problems."
+            description="Start from the routine you want to make easier, then move into the PawHaven collection built around it."
           />
-          <div className="home-solution-list">
+          <div className="home-solution-list home-solution-list--problems">
             {problemSolutions.map((item) => (
-              <article className="home-solution-card" key={item.problem}>
+              <article
+                className="home-solution-card home-problem-card"
+                key={item.problem}
+              >
+                <p className="home-problem-card__category">{item.category}</p>
                 <h3>{item.problem}</h3>
                 <p>{item.solution}</p>
+                <ButtonLink href={item.href} variant="secondary">
+                  View picks
+                </ButtonLink>
               </article>
             ))}
           </div>
@@ -241,18 +279,20 @@ export default function Home() {
       </Section>
 
       <Section>
-        <div className="home-split home-split--center">
-          <div>
-            <p className="eyebrow">Why PawHaven</p>
-            <h2 className="home-section-title">
-              A cleaner, cozier pet home without overcomplicating the cart.
-            </h2>
-          </div>
-          <ul className="home-check-list">
+        <div className="home-split">
+          <SectionHeader
+            eyebrow="Why PawHaven"
+            title="Why choose PawHaven instead of random marketplace finds?"
+            description="PawHaven is shaped around practical pet-home routines, clear product roles, and honest expectations for shoppers in the Philippines."
+          />
+          <div className="home-check-list home-check-list--cards">
             {whyPawHavenItems.map((item) => (
-              <li key={item}>{item}</li>
+              <article className="home-choice-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </Section>
 
@@ -354,9 +394,9 @@ export default function Home() {
         description="Explore warm, practical accessories for comfort, cleanup, walks, travel, and organized pet spaces."
         actions={
           <>
-            <ButtonLink href="/shop">Shop Featured Picks</ButtonLink>
+            <ButtonLink href="/shop">Shop Best Picks</ButtonLink>
             <ButtonLink href="/categories" variant="secondary">
-              Explore Categories
+              Explore Pet Routines
             </ButtonLink>
           </>
         }

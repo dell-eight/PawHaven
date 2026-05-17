@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Nunito_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({
+const nunitoSans = Nunito_Sans({
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-nunito-sans",
 });
 
 const fraunces = Fraunces({
@@ -55,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fraunces.variable}`}>
+      <body className={`${nunitoSans.variable} ${fraunces.variable}`}>
         <CartProvider>
           <SiteShell>{children}</SiteShell>
         </CartProvider>
