@@ -18,7 +18,11 @@ export function MobileNav({ links }: MobileNavProps) {
       onToggle={(event) => setIsOpen(event.currentTarget.open)}
       open={isOpen}
     >
-      <summary className="mobile-nav__toggle" aria-label="Open menu">
+      <summary
+        className="mobile-nav__toggle"
+        aria-expanded={isOpen}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+      >
         <span className="mobile-nav__line" aria-hidden="true" />
         <span className="mobile-nav__line" aria-hidden="true" />
         <span className="mobile-nav__line" aria-hidden="true" />
