@@ -10,7 +10,9 @@ type AddToCartButtonProps = {
 
 export function AddToCartButton({ productId }: AddToCartButtonProps) {
   const { addItem } = useCart();
-  const [status, setStatus] = useState("Cart is local until checkout is configured.");
+  const [status, setStatus] = useState(
+    "Add to cart is available while checkout setup is being finalized.",
+  );
 
   return (
     <div className="product-purchase">

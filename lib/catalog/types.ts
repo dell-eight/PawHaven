@@ -26,6 +26,7 @@ export type Product = {
   price: number;
   compareAtPrice: number | null;
   shortDescription: string;
+  benefitSubtitle?: string;
   longDescription: string;
   benefits: string[];
   features: string[];

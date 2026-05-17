@@ -83,6 +83,8 @@ export const products: Product[] = [
     compareAtPrice: 699,
     shortDescription:
       "A reusable cleaner-home brush for lifting visible pet hair from sofas, cushions, blankets, and everyday fabrics.",
+    benefitSubtitle:
+      "Helps lift visible fur from sofas, cushions, blankets, and everyday fabric surfaces.",
     longDescription:
       "This reusable pet hair remover brush is made for quick cleanup moments around the home. Keep one near the sofa, laundry area, or entryway to tidy common pet zones without relying on single-use sheets.",
     benefits: [
@@ -249,15 +251,17 @@ export const products: Product[] = [
   },
   {
     id: "cat-scratching-lounge",
-    name: "Cat Scratching Lounge",
+    name: "Cat Scratching Lounge Bed",
     slug: "cat-scratching-lounge",
     category: "cat-essentials",
     price: 1099,
     compareAtPrice: 1399,
     shortDescription:
       "A scratch-friendly lounge piece for cats who like to stretch, perch, and relax at home.",
+    benefitSubtitle:
+      "A cozy scratch-and-rest spot for cats who love stretching, lounging, and claiming their own corner.",
     longDescription:
-      "The Cat Scratching Lounge gives cats a dedicated surface for everyday scratching and lounging. Its simple silhouette works in living rooms, home offices, and cozy cat corners.",
+      "The Cat Scratching Lounge Bed gives cats a dedicated surface for everyday scratching and lounging. Its simple silhouette works in living rooms, home offices, and cozy cat corners.",
     benefits: [
       "Creates a dedicated scratch area",
       "Doubles as a casual lounge spot",
@@ -300,6 +304,8 @@ export const products: Product[] = [
     compareAtPrice: 799,
     shortDescription:
       "A compact rinse cup for muddy paws after rainy walks, park trips, and outdoor breaks.",
+    benefitSubtitle:
+      "Useful after rainy walks, park trips, and outdoor breaks before paws reach the floor.",
     longDescription:
       "The Muddy Paw Cleaning Cup helps make post-walk cleanup more manageable. Add water, gently rinse paws, and dry before your pet heads back into cozy indoor spaces.",
     benefits: [
@@ -516,6 +522,8 @@ export const products: Product[] = [
     compareAtPrice: 1899,
     shortDescription:
       "A window perch style lounge for cats who like sunny views and elevated resting spots.",
+    benefitSubtitle:
+      "Gives cats an elevated sunny spot for lounging, watching, and resting.",
     longDescription:
       "The Cozy Cat Window Perch creates a dedicated lookout spot for everyday lounging. It is designed for cat homes that need comfort without taking up much floor space.",
     benefits: [
@@ -603,6 +611,8 @@ export const products: Product[] = [
     compareAtPrice: 699,
     shortDescription:
       "A compact walk bottle with an attached drinking tray for easier water breaks away from home.",
+    benefitSubtitle:
+      "Makes water breaks easier during walks, errands, travel, and outdoor time.",
     longDescription:
       "This portable dog water bottle is made for walks, park visits, and car outings where a simple drink setup is helpful. Keep it in a walking bag or car caddy for everyday convenience.",
     benefits: [

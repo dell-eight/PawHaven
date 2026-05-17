@@ -32,6 +32,20 @@ const trustBadges = [
   "Designed for comfort, convenience, and cleaner homes",
 ];
 
+const purchaseInfoItems = [
+  "PHP pricing",
+  "Philippines delivery details shown before checkout",
+  "Support for damaged or wrong items",
+  "No risky health or medical claims",
+];
+
+const goodToKnowItems = [
+  "Check size and fit guidance before choosing a product.",
+  "Review product photos, measurements, care notes, and setup details.",
+  "Contact support with photos if an item arrives damaged or wrong.",
+  "Keep packaging until you have checked the item.",
+];
+
 const productStructuredDataEnabled = false;
 
 function createProductStructuredData(product: NonNullable<ReturnType<typeof getProductBySlug>>) {
@@ -124,7 +138,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               ) : null}
             </div>
             <p className="product-hero__description">
-              {product.shortDescription}
+              {product.benefitSubtitle ?? product.shortDescription}
             </p>
 
             <ul className="product-benefits">
@@ -139,6 +153,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </ul>
 
             <AddToCartButton productId={product.id} />
+
+            <ul className="product-purchase-info" aria-label="Purchase notes">
+              {purchaseInfoItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -176,9 +196,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <article className="product-info-panel">
             <h2>Sizing and fit</h2>
             <p>
-              Final measurements, size options, and fit guidance should be
-              confirmed before accepting real orders. Measure your pet and
-              compare against the final size guide when it is available.
+              Check the final size guide, product measurements, and fit notes
+              before ordering. Measure your pet and compare against the product
+              dimensions when they are available.
             </p>
             <ButtonLink href="/faq" variant="secondary">
               Read sizing and fit FAQs
@@ -186,11 +206,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </article>
 
           <article className="product-info-panel">
-            <h2>Ordering status</h2>
-            <p>
-              Add to Cart is available for planning, but checkout and payment
-              are disabled until the order workflow is configured and tested.
-            </p>
+            <h2>Good to know before buying</h2>
+            <ul>
+              {goodToKnowItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </article>
         </div>
       </Section>
@@ -198,8 +219,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <Section tone="beige">
         <div className="product-support-grid">
           <article className="product-info-panel">
-            <h2>Shipping note</h2>
+            <h2>Delivery & support</h2>
+            <p>
+              PawHaven is preparing a Philippines-friendly checkout and
+              fulfillment flow. Final delivery estimates should be shown clearly
+              before accepting real orders.
+            </p>
             <p>{product.shippingNote}</p>
+            <p>
+              Once support is active, customer messages about damaged or wrong
+              items should receive a reply within 24-48 hours.
+            </p>
             <ButtonLink href="/shipping-returns" variant="secondary">
               Check shipping and returns
             </ButtonLink>
