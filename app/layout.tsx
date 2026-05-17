@@ -34,9 +34,22 @@ export const metadata: Metadata = {
     "pet hair remover",
     "cleaner home pets",
   ],
+  icons: {
+    apple: "/images/brand/pawhaven-brand-logo-only-transparent.png",
+    icon: "/images/brand/pawhaven-brand-logo-only-transparent.png",
+    shortcut: "/images/brand/pawhaven-brand-logo-only-transparent.png",
+  },
   openGraph: {
     title: "PawHaven | Cozy Essentials for Happier Pets and Cleaner Homes",
     description: siteConfig.description,
+    images: [
+      {
+        alt: "PawHaven logo",
+        height: 340,
+        url: "/images/brand/pawhaven-brand-text-only-transparent.png",
+        width: 1185,
+      },
+    ],
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { Container } from "@/components/ui/Container";
 import { NewsletterSignup } from "@/components/ui/NewsletterSignup";
 import {
@@ -37,8 +38,8 @@ export function Footer() {
       <Container className="site-footer__inner">
         <div className="site-footer__top">
           <div className="site-footer__brand">
-            <Link className="site-footer__logo" href="/">
-              PawHaven
+            <Link className="site-footer__logo" href="/" aria-label="PawHaven home">
+              <BrandLogo footer />
             </Link>
             <p>
               PawHaven helps pet parents create cleaner, cozier, and more

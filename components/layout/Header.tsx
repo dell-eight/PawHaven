@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CartNavLink } from "@/components/cart/CartNavLink";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { Container } from "@/components/ui/Container";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { mainNavLinks } from "@/lib/navigation";
@@ -12,7 +13,7 @@ export function Header() {
       </div>
       <Container className="site-header__inner">
         <Link className="site-header__logo" href="/" aria-label="PawHaven home">
-          PawHaven
+          <BrandLogo />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">

@@ -53,8 +53,6 @@ body {
 h1,
 h2,
 h3,
-.site-header__logo,
-.site-footer__logo,
 .section__title,
 .page-header__title,
 .home-section-title,
@@ -135,29 +133,44 @@ svg {
   min-height: 2.75rem;
   align-items: center;
   color: var(--color-brown-900);
-  font-size: 1.42rem;
-  font-weight: 900;
   gap: 0.5rem;
-  letter-spacing: 0;
+  min-width: 0;
   text-decoration: none;
 }
 
-.site-header__logo::before,
-.site-footer__logo::before {
-  display: inline-grid;
-  width: 2rem;
-  height: 2rem;
+.brand-logo {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(217, 185, 149, 0.76);
-  border-radius: 999px;
-  background: var(--color-peach-100);
-  box-shadow: var(--shadow-inset-warm);
-  color: var(--color-sage-700);
-  content: "P";
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  font-weight: 950;
+  gap: 0.48rem;
+  min-width: 0;
+}
+
+.brand-logo__icon,
+.brand-logo__wordmark {
+  display: block;
+  flex: 0 0 auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-logo__icon {
+  width: 2.3rem;
+}
+
+.brand-logo__wordmark {
+  width: clamp(7.2rem, 12vw, 9.4rem);
+}
+
+.brand-logo--footer {
+  gap: 0.58rem;
+}
+
+.brand-logo--footer .brand-logo__icon {
+  width: 2.8rem;
+}
+
+.brand-logo--footer .brand-logo__wordmark {
+  width: clamp(8.5rem, 16vw, 11rem);
 }
 
 .desktop-nav {
@@ -2268,14 +2281,26 @@ svg {
   .site-header__logo,
   .site-footer__logo {
     min-height: 2.5rem;
-    font-size: 1.24rem;
   }
 
-  .site-header__logo::before,
-  .site-footer__logo::before {
-    width: 1.8rem;
-    height: 1.8rem;
-    font-size: 0.84rem;
+  .brand-logo {
+    gap: 0.42rem;
+  }
+
+  .brand-logo__icon {
+    width: 2.05rem;
+  }
+
+  .brand-logo__wordmark {
+    width: clamp(6.45rem, 32vw, 7.4rem);
+  }
+
+  .brand-logo--footer .brand-logo__icon {
+    width: 2.45rem;
+  }
+
+  .brand-logo--footer .brand-logo__wordmark {
+    width: 8.5rem;
   }
 
   .mobile-nav__toggle {
@@ -2531,6 +2556,16 @@ svg {
 
   .footer-links__link {
     min-height: 2.5rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .site-header__logo .brand-logo__wordmark {
+    display: none;
+  }
+
+  .site-header__logo .brand-logo__icon {
+    width: 2.3rem;
   }
 }
 

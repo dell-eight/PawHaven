@@ -26,6 +26,14 @@ export function createSeoMetadata({
     openGraph: {
       title,
       description,
+      images: [
+        {
+          alt: "PawHaven logo",
+          height: 340,
+          url: "/images/brand/pawhaven-brand-text-only-transparent.png",
+          width: 1185,
+        },
+      ],
       url: path,
       siteName: siteConfig.name,
       type,
