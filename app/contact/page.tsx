@@ -34,6 +34,13 @@ const supportExpectations = [
   },
 ];
 
+const supportTrustItems = [
+  "Support guidance for damaged or wrong items",
+  "Sizing and product-use questions welcomed once support is active",
+  "No food, medicine, supplements, or risky pet health claims",
+  "Product pages available for browsing while checkout and fulfillment details are finalized",
+];
+
 export default function ContactPage() {
   return (
     <main>
@@ -85,6 +92,11 @@ export default function ContactPage() {
                   <h3>{item.title}</h3>
                   <p>{item.copy}</p>
                 </article>
+              ))}
+            </div>
+            <div className="support-trust-list" aria-label="Support trust notes">
+              {supportTrustItems.map((item) => (
+                <span key={item}>{item}</span>
               ))}
             </div>
           </aside>

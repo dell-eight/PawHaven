@@ -1197,6 +1197,25 @@ svg {
   padding: 0.55rem 0.7rem;
 }
 
+.site-footer__trust-list,
+.support-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.site-footer__trust-list span,
+.support-trust-list span {
+  border: 1px solid rgba(124, 154, 114, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-brown-700);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.2;
+  padding: 0.42rem 0.62rem;
+}
+
 .site-footer__newsletter .newsletter-signup {
   box-shadow: var(--shadow-soft);
 }
@@ -1653,6 +1672,13 @@ svg {
   line-height: 1.25;
 }
 
+.product-review-placeholder {
+  border-color: rgba(124, 154, 114, 0.28);
+  background:
+    linear-gradient(145deg, rgba(124, 154, 114, 0.1), transparent 45%),
+    linear-gradient(180deg, var(--color-white), #fffdf9);
+}
+
 .product-info-panel p,
 .product-info-panel li {
   color: var(--color-brown-700);
@@ -2089,6 +2115,10 @@ svg {
   line-height: 1.25;
 }
 
+.support-trust-list {
+  padding-top: 0.15rem;
+}
+
 .support-panel h2,
 .support-topic-card h2,
 .support-faq-cta h2,
@@ -2429,7 +2459,8 @@ svg {
   .policy-card,
   .policy-support,
   .home-solution-card,
-  .home-choice-card {
+  .home-choice-card,
+  .home-criteria-card {
     padding: 1rem;
   }
 
@@ -3233,6 +3264,57 @@ svg {
   color: var(--color-brown-700);
 }
 
+.home-criteria {
+  display: grid;
+  align-items: start;
+  gap: clamp(1.25rem, 4vw, 2rem);
+}
+
+.home-criteria__copy,
+.home-criteria-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.home-criteria__copy h2,
+.home-criteria__copy p,
+.home-criteria-card h3,
+.home-criteria-card p {
+  margin: 0;
+}
+
+.home-criteria__copy h2 {
+  color: var(--color-brown-900);
+  font-size: clamp(1.75rem, 5vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.home-criteria__copy p:not(.eyebrow),
+.home-criteria-card p {
+  color: var(--color-brown-700);
+}
+
+.home-criteria__list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.home-criteria-card {
+  border: 1px solid rgba(124, 154, 114, 0.24);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(124, 154, 114, 0.1), transparent 48%),
+    linear-gradient(180deg, var(--color-white), #fffdf9);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+
+.home-criteria-card h3 {
+  color: var(--color-brown-900);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
 .home-bundle {
   display: grid;
   align-items: center;
@@ -3382,6 +3464,7 @@ svg {
 @media (min-width: 56rem) {
   .home-hero__inner,
   .home-split,
+  .home-criteria,
   .home-bundle {
     grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.9fr);
   }

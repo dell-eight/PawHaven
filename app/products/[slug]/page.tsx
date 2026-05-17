@@ -34,9 +34,11 @@ const trustBadges = [
 
 const purchaseInfoItems = [
   "PHP pricing",
+  "Clear product role before buying",
   "Philippines delivery details shown before checkout",
-  "Support for damaged or wrong items",
-  "No risky health or medical claims",
+  "Support guidance for damaged or wrong items",
+  "No food, medicine, supplements, or risky pet health claims",
+  "Product pages available while checkout and fulfillment details are finalized",
 ];
 
 const goodToKnowItems = [
@@ -238,6 +240,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <article className="product-info-panel">
             <h2>Trust notes</h2>
             <TrustBadgeList badges={trustBadges} />
+          </article>
+
+          <article className="product-info-panel product-review-placeholder">
+            <h2>Customer reviews</h2>
+            <p>
+              No reviews yet - real customer reviews will be added after
+              PawHaven starts accepting orders.
+            </p>
           </article>
         </div>
       </Section>

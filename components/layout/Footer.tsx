@@ -49,6 +49,11 @@ export function Footer() {
               Practical comfort, cleanup, cat, and walk essentials with clear
               product roles and honest shopping expectations.
             </p>
+            <div className="site-footer__trust-list" aria-label="PawHaven trust signals">
+              <span>Philippines-focused store</span>
+              <span>PHP pricing</span>
+              <span>No food, medicine, supplements, or risky pet health claims</span>
+            </div>
           </div>
 
           <div className="site-footer__newsletter">

@@ -122,6 +122,24 @@ const whyPawHavenItems = [
   },
 ];
 
+const productChoiceSteps = [
+  {
+    title: "Starts with a real home routine",
+    copy:
+      "Picks are organized around fur cleanup, muddy paws, cozy rest, cat furniture needs, and easier walks.",
+  },
+  {
+    title: "Keeps the product role clear",
+    copy:
+      "Each item should be easy to understand before buying, with a practical use case and simple care or sizing notes.",
+  },
+  {
+    title: "Avoids risky pet claims",
+    copy:
+      "PawHaven focuses on accessories and avoids food, medicine, supplements, and medical-style promises.",
+  },
+];
+
 const benefits = [
   "Cleaner pet zones",
   "Cozy rest spots",
@@ -204,9 +222,11 @@ export default function Home() {
       <Section tone="beige" className="home-trust">
         <TrustBadgeList
           badges={[
-            "Pet-parent friendly picks",
-            "Cozy home essentials",
-            "Practical everyday products",
+            "Philippines-focused store",
+            "PHP pricing",
+            "Clear product role before buying",
+            "Sizing, care, and delivery notes included",
+            "Product pages available while checkout and fulfillment details are finalized",
             "No food, medicine, or risky claims",
           ]}
         />
@@ -290,6 +310,30 @@ export default function Home() {
               <article className="home-choice-card" key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="white">
+        <div className="home-criteria">
+          <div className="home-criteria__copy">
+            <p className="eyebrow">How PawHaven chooses products</p>
+            <h2>Practical essentials first, risky promises never.</h2>
+            <p>
+              PawHaven focuses on practical pet-home essentials that solve
+              everyday problems: fur cleanup, muddy paws, cozy rest, cat
+              furniture needs, and easier walks. We avoid risky pet health
+              claims and focus on accessories that are easy to understand before
+              buying.
+            </p>
+          </div>
+          <div className="home-criteria__list">
+            {productChoiceSteps.map((step) => (
+              <article className="home-criteria-card" key={step.title}>
+                <h3>{step.title}</h3>
+                <p>{step.copy}</p>
               </article>
             ))}
           </div>

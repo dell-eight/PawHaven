@@ -40,7 +40,7 @@ export function ProductCard({
           <Link href={productHref}>{product.name}</Link>
         </h3>
         <p className="product-card__confidence">
-          See benefits, care notes, sizing guidance, and delivery details.
+          PHP pricing. Sizing, care, and delivery notes included.
         </p>
         <p className="product-card__summary">{product.shortDescription}</p>
         <div className="product-card__footer">
