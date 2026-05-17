@@ -18,17 +18,13 @@ import {
 } from "@/data/products";
 import { createSeoMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+import { formatPrice } from "@/lib/pricing";
 
 type ProductPageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
-
-const currencyFormatter = new Intl.NumberFormat("en-US", {
-  currency: "USD",
-  style: "currency",
-});
 
 const trustBadges = [
   "Thoughtfully selected for everyday pet parents",
@@ -119,11 +115,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <h1 id="product-title">{product.name}</h1>
             <div className="product-hero__prices" aria-label="Product price">
               <span className="product-hero__price">
-                {currencyFormatter.format(product.price)}
+                {formatPrice(product.price)}
               </span>
               {product.compareAtPrice ? (
                 <span className="product-hero__compare-price">
-                  {currencyFormatter.format(product.compareAtPrice)}
+                  {formatPrice(product.compareAtPrice)}
                 </span>
               ) : null}
             </div>
@@ -138,7 +134,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </ul>
 
             <ul className="product-hero__trust-list">
-              <li>Review sizing and care notes before ordering.</li>
+              <li>See benefits, care notes, sizing guidance, and delivery details.</li>
               <li>Cart is active for planning; checkout is not configured yet.</li>
             </ul>
 

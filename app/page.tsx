@@ -244,7 +244,7 @@ export default function Home() {
         <div className="card-grid card-grid--4">
           {bestSellers.map((product) => (
             <ProductCard
-              ctaLabel="Check details"
+              ctaLabel="See Details"
               key={product.id}
               product={product}
               showAddToCart={false}

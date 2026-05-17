@@ -35,8 +35,8 @@ export const products: Product[] = [
     name: "Cozy Cloud Washable Pet Bed",
     slug: "cozy-cloud-pet-bed",
     category: "cozy-comfort",
-    price: 58,
-    compareAtPrice: 72,
+    price: 1499,
+    compareAtPrice: 1899,
     shortDescription:
       "A plush low-profile bed for cats and small dogs who need a dedicated cozy rest spot.",
     longDescription:
@@ -79,8 +79,8 @@ export const products: Product[] = [
     name: "Reusable Pet Hair Remover Brush",
     slug: "pet-hair-remover-brush",
     category: "grooming-clean-home",
-    price: 18,
-    compareAtPrice: 24,
+    price: 499,
+    compareAtPrice: 699,
     shortDescription:
       "A reusable cleaner-home brush for lifting visible pet hair from sofas, cushions, blankets, and everyday fabrics.",
     longDescription:
@@ -123,8 +123,8 @@ export const products: Product[] = [
     name: "Foldable Soft-Sided Pet Carrier",
     slug: "foldable-travel-pet-carrier",
     category: "walk-travel",
-    price: 46,
-    compareAtPrice: 59,
+    price: 1299,
+    compareAtPrice: 1599,
     shortDescription:
       "A foldable soft-sided carrier for cats and small dogs on short outings, errands, and planned trips.",
     longDescription:
@@ -166,8 +166,8 @@ export const products: Product[] = [
     name: "Everyday No-Pull Harness",
     slug: "everyday-no-pull-harness",
     category: "walk-travel",
-    price: 34,
-    compareAtPrice: 42,
+    price: 899,
+    compareAtPrice: 1099,
     shortDescription:
       "An adjustable walking harness made for comfortable daily strolls and simple leash setup.",
     longDescription:
@@ -209,8 +209,8 @@ export const products: Product[] = [
     name: "Waterproof Feeding Station Mat",
     slug: "waterproof-pet-feeding-mat",
     category: "grooming-clean-home",
-    price: 22,
-    compareAtPrice: 28,
+    price: 599,
+    compareAtPrice: 799,
     shortDescription:
       "A wipeable feeding mat that helps catch everyday water drips, crumbs, and bowl-area mess.",
     longDescription:
@@ -252,8 +252,8 @@ export const products: Product[] = [
     name: "Cat Scratching Lounge",
     slug: "cat-scratching-lounge",
     category: "cat-essentials",
-    price: 39,
-    compareAtPrice: 49,
+    price: 1099,
+    compareAtPrice: 1399,
     shortDescription:
       "A scratch-friendly lounge piece for cats who like to stretch, perch, and relax at home.",
     longDescription:
@@ -296,8 +296,8 @@ export const products: Product[] = [
     name: "Muddy Paw Cleaning Cup",
     slug: "paw-cleaning-cup",
     category: "grooming-clean-home",
-    price: 21,
-    compareAtPrice: 27,
+    price: 599,
+    compareAtPrice: 799,
     shortDescription:
       "A compact rinse cup for muddy paws after rainy walks, park trips, and outdoor breaks.",
     longDescription:
@@ -340,8 +340,8 @@ export const products: Product[] = [
     name: "Water-Resistant Car Seat Pet Cover",
     slug: "car-seat-pet-cover",
     category: "walk-travel",
-    price: 52,
-    compareAtPrice: 68,
+    price: 1499,
+    compareAtPrice: 1899,
     shortDescription:
       "A water-resistant car seat cover for helping protect seats from pet hair, dirt, and outing mess.",
     longDescription:
@@ -383,8 +383,8 @@ export const products: Product[] = [
     name: "Soft Fleece Pet Comfort Blanket",
     slug: "soft-fleece-pet-blanket",
     category: "cozy-comfort",
-    price: 24,
-    compareAtPrice: 32,
+    price: 699,
+    compareAtPrice: 899,
     shortDescription:
       "A soft fleece comfort layer for sofas, beds, crates, carriers, and everyday pet lounging.",
     longDescription:
@@ -426,8 +426,8 @@ export const products: Product[] = [
     name: "Pet Toy Storage Basket",
     slug: "pet-toy-storage-basket",
     category: "home-organization",
-    price: 29,
-    compareAtPrice: 36,
+    price: 799,
+    compareAtPrice: 999,
     shortDescription:
       "A soft storage basket for keeping toys, leashes, blankets, and small pet supplies together.",
     longDescription:
@@ -469,8 +469,8 @@ export const products: Product[] = [
     name: "Lint Roller Refill Set",
     slug: "lint-roller-refill-set",
     category: "grooming-clean-home",
-    price: 14,
-    compareAtPrice: 18,
+    price: 399,
+    compareAtPrice: 499,
     shortDescription:
       "A practical refill set for quick pet hair touch-ups on clothing, bags, and fabric surfaces.",
     longDescription:
@@ -512,8 +512,8 @@ export const products: Product[] = [
     name: "Cozy Cat Window Perch",
     slug: "cozy-cat-window-perch",
     category: "cat-essentials",
-    price: 48,
-    compareAtPrice: 62,
+    price: 1499,
+    compareAtPrice: 1899,
     shortDescription:
       "A window perch style lounge for cats who like sunny views and elevated resting spots.",
     longDescription:
@@ -556,8 +556,8 @@ export const products: Product[] = [
     name: "Adjustable Pet Leash",
     slug: "adjustable-pet-leash",
     category: "walk-travel",
-    price: 23,
-    compareAtPrice: 30,
+    price: 649,
+    compareAtPrice: 799,
     shortDescription:
       "A simple adjustable leash for daily dog walks, quick outdoor breaks, and travel bags.",
     longDescription:
@@ -599,8 +599,8 @@ export const products: Product[] = [
     name: "Portable Dog Water Bottle",
     slug: "portable-water-bottle-for-walks",
     category: "walk-travel",
-    price: 20,
-    compareAtPrice: 26,
+    price: 549,
+    compareAtPrice: 699,
     shortDescription:
       "A compact walk bottle with an attached drinking tray for easier water breaks away from home.",
     longDescription:
@@ -643,8 +643,8 @@ export const products: Product[] = [
     name: "Gentle Pet Grooming Glove",
     slug: "pet-grooming-glove",
     category: "grooming-clean-home",
-    price: 16,
-    compareAtPrice: 21,
+    price: 449,
+    compareAtPrice: 599,
     shortDescription:
       "A gentle grooming glove for collecting loose hair before it lands on sofas, blankets, and clothes.",
     longDescription:
@@ -686,8 +686,8 @@ export const products: Product[] = [
     name: "Washable Pet Sofa Blanket",
     slug: "washable-pet-blanket",
     category: "cozy-comfort",
-    price: 28,
-    compareAtPrice: 36,
+    price: 799,
+    compareAtPrice: 999,
     shortDescription:
       "A washable everyday layer for pet beds, sofas, crates, and cozy home routines.",
     longDescription:
@@ -729,8 +729,8 @@ export const products: Product[] = [
     name: "Compact Anti-Slip Bowl Mat",
     slug: "anti-slip-pet-bowl-mat",
     category: "grooming-clean-home",
-    price: 19,
-    compareAtPrice: 24,
+    price: 499,
+    compareAtPrice: 649,
     shortDescription:
       "A compact bowl mat that helps keep small feeding stations steadier and easier to wipe clean.",
     longDescription:
@@ -772,8 +772,8 @@ export const products: Product[] = [
     name: "Pet Travel Organizer Bag",
     slug: "pet-travel-organizer-bag",
     category: "walk-travel",
-    price: 44,
-    compareAtPrice: 56,
+    price: 1299,
+    compareAtPrice: 1599,
     shortDescription:
       "A compartment bag for keeping leashes, blankets, cleanup tools, and travel accessories together.",
     longDescription:
@@ -815,8 +815,8 @@ export const products: Product[] = [
     name: "Soft Plush Squeaky Toy",
     slug: "soft-plush-squeaky-toy",
     category: "play-enrichment",
-    price: 13,
-    compareAtPrice: 17,
+    price: 349,
+    compareAtPrice: 449,
     shortDescription:
       "A soft plush toy for supervised play, gentle fetch moments, and cozy toy baskets.",
     longDescription:
@@ -858,8 +858,8 @@ export const products: Product[] = [
     name: "Reflective Safety Collar",
     slug: "reflective-safety-collar",
     category: "safety-accessories",
-    price: 17,
-    compareAtPrice: 23,
+    price: 449,
+    compareAtPrice: 599,
     shortDescription:
       "An adjustable reflective collar for added visibility during everyday walking routines.",
     longDescription:

@@ -93,7 +93,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="card-grid card-grid--4">
             {categoryProducts.map((product) => (
               <ProductCard
-                ctaLabel="Check details"
+                ctaLabel="See Details"
                 key={product.id}
                 product={product}
               />

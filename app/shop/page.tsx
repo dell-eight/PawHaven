@@ -8,9 +8,9 @@ import { getPublicProducts } from "@/data/products";
 import { createSeoMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "Shop PawHaven Essentials",
+  title: "Shop PawHaven Picks",
   description:
-    "Shop PawHaven pet comfort, cat essentials, cleaner-home tools, and walk and travel products for happier pets and cleaner homes.",
+    "Shop practical PawHaven essentials for cleaner homes, cozy rest, cat routines, and easier pet outings.",
   path: "/shop",
 });
 
@@ -21,8 +21,8 @@ export default function ShopPage() {
     <main>
       <PageHeader
         eyebrow="Shop"
-        title="Shop PawHaven Essentials"
-        description="Focused cozy essentials for happier pets and cleaner homes: cat comfort, soft rest spots, cleaner-home helpers, and useful outing products."
+        title="Shop PawHaven Picks"
+        description="Practical essentials for cleaner homes, cozy rest, and easier pet routines."
       />
       <Section tone="white">
         <ShopProductBrowser

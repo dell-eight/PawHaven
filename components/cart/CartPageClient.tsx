@@ -6,11 +6,7 @@ import { useCart } from "@/components/cart/CartProvider";
 import { ProductVisual } from "@/components/ui/ProductVisual";
 import { getCategoryName } from "@/data/categories";
 import { products } from "@/data/products";
-
-const currencyFormatter = new Intl.NumberFormat("en-US", {
-  currency: "USD",
-  style: "currency",
-});
+import { formatPrice } from "@/lib/pricing";
 
 export function CartPageClient() {
   const { clearCart, items, removeItem, setQuantity } = useCart();
@@ -103,9 +99,9 @@ export function CartPageClient() {
             </div>
 
             <div className="cart-item__price">
-              <span>{currencyFormatter.format(item.product.price)}</span>
+              <span>{formatPrice(item.product.price)}</span>
               <strong>
-                {currencyFormatter.format(item.product.price * item.quantity)}
+                {formatPrice(item.product.price * item.quantity)}
               </strong>
             </div>
           </article>
@@ -116,7 +112,7 @@ export function CartPageClient() {
         <h2>Order summary</h2>
         <div className="cart-summary__row">
           <span>Subtotal</span>
-          <strong>{currencyFormatter.format(subtotal)}</strong>
+          <strong>{formatPrice(subtotal)}</strong>
         </div>
         <p className="cart-summary__note">
           Estimated shipping details are not final until fulfillment is

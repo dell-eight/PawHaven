@@ -4,6 +4,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { ProductVisual } from "@/components/ui/ProductVisual";
 import { getCategoryName } from "@/data/categories";
 import type { Product } from "@/lib/catalog/types";
+import { formatPrice } from "@/lib/pricing";
 
 type ProductCardProps = {
   categoryLabel?: string;
@@ -13,14 +14,9 @@ type ProductCardProps = {
   showAddToCart?: boolean;
 };
 
-const currencyFormatter = new Intl.NumberFormat("en-US", {
-  currency: "USD",
-  style: "currency",
-});
-
 export function ProductCard({
   categoryLabel,
-  ctaLabel = "View Product",
+  ctaLabel = "See Details",
   href,
   product,
   showAddToCart = true,
@@ -44,17 +40,17 @@ export function ProductCard({
           <Link href={productHref}>{product.name}</Link>
         </h3>
         <p className="product-card__confidence">
-          Review details, sizing, and care notes before ordering.
+          See benefits, care notes, sizing guidance, and delivery details.
         </p>
         <p className="product-card__summary">{product.shortDescription}</p>
         <div className="product-card__footer">
           <div className="product-card__prices">
             <span className="product-card__price">
-              {currencyFormatter.format(product.price)}
+              {formatPrice(product.price)}
             </span>
             {product.compareAtPrice ? (
               <span className="product-card__compare-price">
-                {currencyFormatter.format(product.compareAtPrice)}
+                {formatPrice(product.compareAtPrice)}
               </span>
             ) : null}
           </div>
