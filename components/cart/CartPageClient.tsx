@@ -34,8 +34,9 @@ export function CartPageClient() {
           corners, and everyday pet-care routines.
         </p>
         <p className="cart-summary__checkout-note">
-          Checkout integration is not active yet. Connect your payment provider
-          before accepting real orders.
+          PawHaven is currently preparing its full checkout experience. Product
+          pages are available for browsing while payment and fulfillment details
+          are finalized.
         </p>
         <ButtonLink href="/shop">Continue Shopping</ButtonLink>
       </div>
@@ -115,15 +116,16 @@ export function CartPageClient() {
           <strong>{formatPrice(subtotal)}</strong>
         </div>
         <p className="cart-summary__note">
-          Estimated shipping details are not final until fulfillment is
-          configured for real orders.
+          Estimated shipping details are being finalized with the checkout and
+          fulfillment flow.
         </p>
         <Button disabled fullWidth type="button">
           Checkout
         </Button>
         <p className="cart-summary__checkout-note">
-          Checkout integration is not active yet. Connect your payment provider
-          before accepting real orders.
+          PawHaven is currently preparing its full checkout experience. Product
+          pages are available for browsing while payment and fulfillment details
+          are finalized.
         </p>
         <div className="cart-summary__actions">
           <ButtonLink href="/shop" fullWidth variant="secondary">

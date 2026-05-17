@@ -5,7 +5,7 @@ export const siteConfig = {
   name: "PawHaven",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description:
-    "Shop cozy essentials for happier pets and cleaner homes, including cat essentials, cozy rest products, cleaner-home helpers, and walk and travel convenience accessories.",
+    "Shop PawHaven for pet comfort, pet cleaning, cat essentials, and dog accessories for cleaner homes, cozy rest, and easier everyday pet routines in the Philippines.",
   businessRules: {
     allowedFocus: [
       "pet beds",

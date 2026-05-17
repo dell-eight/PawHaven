@@ -9,7 +9,7 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "About PawHaven",
   description:
-    "Learn how PawHaven helps pet parents create cleaner, cozier, and more practical homes with thoughtfully selected pet accessories.",
+    "Learn how PawHaven curates pet comfort, pet cleaning, cat essentials, and dog accessories for cleaner, cozier pet homes in the Philippines.",
   path: "/about",
 });
 

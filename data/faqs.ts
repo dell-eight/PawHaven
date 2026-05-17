@@ -13,12 +13,12 @@ export const faqSections = [
       {
         question: "Can I place a real PawHaven order right now?",
         answer:
-          "This storefront is still pre-launch. Checkout and payment must be configured before PawHaven can accept real orders.",
+          "PawHaven is currently preparing its full checkout experience. Product pages are available for browsing while payment and fulfillment details are finalized.",
       },
       {
         question: "Where can I include order details when contacting support?",
         answer:
-          "Use the optional order number field on the contact form if you have one. If checkout is not active yet, leave that field blank and describe what you need help with.",
+          "Use the optional order number field on the contact form if you have one. If you are browsing before checkout opens, leave that field blank and describe what you need help with.",
       },
     ],
   },
@@ -28,12 +28,12 @@ export const faqSections = [
       {
         question: "How long does shipping take?",
         answer:
-          "Shipping times depend on the final fulfillment setup, destination, and carrier. PawHaven will show clear shipping expectations before accepting real orders.",
+          "Shipping times depend on the final fulfillment setup, destination, and carrier. PawHaven will show clear shipping expectations before customer orders are accepted.",
       },
       {
         question: "Are shipping notes final?",
         answer:
-          "Current product shipping notes are not final until fulfillment is configured. They should be reviewed before launch.",
+          "Current product shipping notes are still being finalized with the fulfillment flow. PawHaven should keep them clear before customer orders are accepted.",
       },
     ],
   },
@@ -43,7 +43,7 @@ export const faqSections = [
       {
         question: "What is the PawHaven return policy?",
         answer:
-          "The final returns policy should be reviewed before launch. PawHaven aims to keep returns clear, fair, and easy to understand before any real purchase is made.",
+          "The final returns policy should be reviewed before checkout opens. PawHaven aims to keep returns clear, fair, and easy to understand before any customer purchase is made.",
       },
       {
         question: "What if an item arrives damaged?",
@@ -63,7 +63,7 @@ export const faqSections = [
       {
         question: "Will product colors look exactly like the photos?",
         answer:
-          "Product colors may vary slightly depending on screen settings, lighting, and supplier photos. PawHaven should use clear images and honest descriptions before launch.",
+          "Product colors may vary slightly depending on screen settings, lighting, and supplier photos. PawHaven should use clear images and honest descriptions before checkout opens.",
       },
     ],
   },
@@ -88,12 +88,12 @@ export const faqSections = [
       {
         question: "Is payment processing active?",
         answer:
-          "No payment provider is active yet. Payment must be configured and tested before accepting real orders.",
+          "PawHaven is currently preparing its full checkout experience. Product pages are available for browsing while payment details are finalized and tested.",
       },
       {
         question: "Why is checkout disabled?",
         answer:
-          "The cart UI is present for storefront planning, but checkout integration is not active yet. PawHaven should not accept payment until the payment provider is connected.",
+          "Checkout stays unavailable until PawHaven finalizes payment, fulfillment, and support details. This helps keep the shopping experience clear and honest.",
       },
     ],
   },

@@ -35,6 +35,7 @@ export function createSeoMetadata({
         },
       ],
       url: path,
+      locale: "en_PH",
       siteName: siteConfig.name,
       type,
     },
@@ -42,6 +43,7 @@ export function createSeoMetadata({
       card: "summary",
       title,
       description,
+      images: ["/images/brand/pawhaven-brand-text-only-transparent.png"],
     },
   };
 }

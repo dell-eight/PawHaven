@@ -17,7 +17,7 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "PawHaven | Cozy Essentials for Happier Pets and Cleaner Homes",
   description:
-    "Shop cozy essentials for happier pets and cleaner homes, including cat essentials, pet comfort, cleaner-home tools, and walk and travel convenience products.",
+    "Shop PawHaven for pet comfort, pet cleaning, cat essentials, and dog accessories for cleaner homes, cozy rest, and easier everyday pet routines in the Philippines.",
   path: "/",
 });
 
@@ -169,7 +169,7 @@ const faqItems = [
   {
     question: "Are checkout and payments active yet?",
     answer:
-      "Not yet. PawHaven is in pre-launch storefront mode before real checkout and payment integrations are configured.",
+      "PawHaven is currently preparing its full checkout experience. Product pages are available for browsing while payment and fulfillment details are finalized.",
   },
 ];
 
@@ -405,7 +405,7 @@ export default function Home() {
         <SectionHeader
           eyebrow="Shop with confidence"
           title="Check the practical details before you choose."
-          description="Use these trust links to understand shipping expectations, sizing guidance, and how to reach PawHaven support before real checkout launches."
+          description="Use these trust links to understand shipping expectations, sizing guidance, and how to reach PawHaven support while the full checkout experience is being prepared."
         />
         <div className="cta-link-grid">
           {universalTrustCtas.map((cta) => (

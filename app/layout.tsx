@@ -28,8 +28,11 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   keywords: [
     "pet accessories",
+    "Philippines pet accessories",
     "pet home care",
+    "pet cleaning",
     "cat essentials",
+    "dog accessories",
     "pet comfort",
     "pet hair remover",
     "cleaner home pets",
@@ -51,6 +54,7 @@ export const metadata: Metadata = {
       },
     ],
     url: siteConfig.url,
+    locale: "en_PH",
     siteName: siteConfig.name,
     type: "website",
   },
@@ -58,6 +62,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "PawHaven | Cozy Essentials for Happier Pets and Cleaner Homes",
     description: siteConfig.description,
+    images: ["/images/brand/pawhaven-brand-text-only-transparent.png"],
   },
 };
 

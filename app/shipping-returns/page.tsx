@@ -8,37 +8,37 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "Shipping and Returns",
   description:
-    "Read PawHaven shipping and returns guidance, including processing, delivery estimates, damaged or wrong items, return eligibility, refunds, and support.",
+    "Read PawHaven shipping and returns guidance for pet comfort, pet cleaning, cat essentials, and dog accessories in the Philippines.",
   path: "/shipping-returns",
 });
 
 const shippingSections = [
   {
     title: "Shipping expectations",
-    copy: "PawHaven aims to show delivery expectations clearly before a real order is accepted. Timelines may vary by product, supplier fulfillment, destination, and carrier.",
+    copy: "PawHaven aims to show delivery expectations clearly before any customer order is accepted. Timelines may vary by product, supplier fulfillment, destination, and carrier.",
   },
   {
     title: "Processing time",
-    copy: "Processing should begin only after an order is accepted and payment is confirmed. Final processing windows must be set after checkout and fulfillment partners are configured.",
+    copy: "Processing should begin only after an order is accepted and payment is confirmed. Final processing windows must be set after checkout and fulfillment partners are finalized.",
   },
   {
     title: "Estimated delivery",
-    copy: "Estimated delivery ranges are not final yet. Final ranges should be shown at checkout or in order communication before PawHaven accepts real orders.",
+    copy: "Estimated delivery ranges are still being finalized. Final ranges should be shown at checkout or in order communication before PawHaven accepts customer orders.",
   },
   {
     title: "Damaged or wrong items",
-    copy: "Once real ordering is active, customers should contact support with the order number if available, clear photos of the item and packaging, and a short description of the issue.",
+    copy: "Once ordering is active, customers should contact support with the order number if available, clear photos of the item and packaging, and a short description of the issue.",
   },
   {
-    title: "Before PawHaven accepts real orders",
-    copy: "Before PawHaven accepts real orders, shipping timelines, supplier fulfillment, payment methods, and return handling must be finalized and tested.",
+    title: "Before PawHaven opens checkout",
+    copy: "PawHaven is currently preparing its full checkout experience. Product pages are available for browsing while payment and fulfillment details are finalized.",
   },
 ];
 
 const returnSections = [
   {
     title: "Returns and refunds",
-    copy: "Return and refund rules must be finalized before launch. PawHaven should explain eligibility, required proof, review steps, and refund handling before any real purchase is made.",
+    copy: "Return and refund rules must be finalized before checkout opens. PawHaven should explain eligibility, required proof, review steps, and refund handling before any customer purchase is made.",
   },
   {
     title: "Return eligibility",
@@ -46,11 +46,11 @@ const returnSections = [
   },
   {
     title: "Items that may not be returnable",
-    copy: "For hygiene and safety reasons, some opened, used, damaged-by-customer, final-sale, or personalized items may not be returnable once the final policy is configured.",
+    copy: "For hygiene and safety reasons, some opened, used, damaged-by-customer, final-sale, or personalized items may not be returnable once the final policy is active.",
   },
   {
     title: "Refund process",
-    copy: "Refund timing depends on the final payment provider and review process. PawHaven should not promise refund timing until the payment and returns workflow is configured.",
+    copy: "Refund timing depends on the final payment provider and review process. PawHaven should not promise refund timing until the payment and returns workflow is finalized.",
   },
 ];
 
@@ -66,17 +66,17 @@ export default function ShippingReturnsPage() {
       <PageHeader
         eyebrow="Policies"
         title="Shipping and Returns"
-        description="Clear, flexible shipping and return guidance for PawHaven customers. This policy page should be finalized before accepting real orders."
+        description="Clear, flexible shipping and return guidance for PawHaven customers while checkout, fulfillment, and return handling are finalized."
       />
 
       <Section tone="white">
         <div className="policy-notice">
-          <p className="eyebrow">Before real orders</p>
-          <h2>Shipping, payment, and return handling must be finalized first.</h2>
+          <p className="eyebrow">Checkout preparation</p>
+          <h2>Shipping, payment, and return handling are being finalized.</h2>
           <p>
-            Before PawHaven accepts real orders, shipping timelines, supplier
-            fulfillment, payment methods, and return handling must be finalized
-            and tested.
+            PawHaven is currently preparing its full checkout experience.
+            Product pages are available for browsing while payment and
+            fulfillment details are finalized.
           </p>
         </div>
       </Section>
@@ -127,7 +127,7 @@ export default function ShippingReturnsPage() {
         <SectionHeader
           eyebrow="Returns"
           title="Returns should feel fair, simple, and transparent."
-          description="PawHaven should explain return eligibility, damaged item handling, and refund expectations clearly before launch."
+          description="PawHaven should explain return eligibility, damaged item handling, and refund expectations clearly before checkout opens."
         />
         <div className="policy-grid">
           {returnSections.map((section) => (
@@ -157,7 +157,7 @@ export default function ShippingReturnsPage() {
       <CtaSection
         eyebrow="Keep shopping carefully"
         title="Review product details before choosing a PawHaven essential."
-        description="Check sizing, care instructions, product notes, and shipping language before ordering once checkout and fulfillment are active."
+        description="Check sizing, care instructions, product notes, and shipping language while PawHaven prepares its full checkout experience."
         actions={
           <>
             <ButtonLink href="/shop">Shop Products</ButtonLink>

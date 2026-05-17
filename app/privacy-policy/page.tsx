@@ -7,18 +7,18 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "Privacy Policy",
   description:
-    "Read PawHaven privacy policy guidance for the pre-launch storefront. Final legal policy review is required before accepting real orders.",
+    "Read PawHaven privacy guidance for product browsing, support messages, newsletter signups, and future checkout preparation.",
   path: "/privacy-policy",
 });
 
 const privacySections = [
   {
-    title: "Pre-launch status",
-    copy: "This PawHaven storefront is not accepting real orders yet. Privacy language should be reviewed and finalized before collecting real customer data, accepting orders, or connecting email and payment providers.",
+    title: "Checkout preparation",
+    copy: "PawHaven is currently preparing its full checkout experience. Product pages are available for browsing while payment, fulfillment, and privacy details are finalized.",
   },
   {
     title: "Information customers may provide",
-    copy: "Once configured, PawHaven may collect information such as name, email address, shipping details, order details, support messages, and newsletter signup information.",
+    copy: "PawHaven may collect information such as name, email address, shipping details, order details, support messages, and newsletter signup information once the relevant tools are active.",
   },
   {
     title: "How information may be used",
@@ -26,7 +26,7 @@ const privacySections = [
   },
   {
     title: "Third-party services",
-    copy: "Payment, email, analytics, fulfillment, and support tools may process data after they are connected. Their policies should be reviewed before launch.",
+    copy: "Payment, email, analytics, fulfillment, and support tools may process data after they are connected. Their policies should be reviewed before PawHaven begins accepting customer orders.",
   },
 ];
 
@@ -36,13 +36,13 @@ export default function PrivacyPolicyPage() {
       <PageHeader
         eyebrow="Policy"
         title="Privacy Policy"
-        description="A clear privacy policy is required before PawHaven collects real customer data or accepts real orders."
+        description="PawHaven should explain how customer information is handled before support, newsletter, payment, and fulfillment tools are fully active."
       />
       <Section tone="white">
         <SectionHeader
           eyebrow="Privacy guidance"
-          title="Review before launch."
-          description="This page is a pre-launch policy outline, not a substitute for final legal review."
+          title="Clear privacy language before customer data flows."
+          description="This page gives customers a plain-language view of how information should be handled as PawHaven prepares its full checkout experience."
         />
         <div className="policy-grid">
           {privacySections.map((section) => (
@@ -59,8 +59,8 @@ export default function PrivacyPolicyPage() {
             <p className="eyebrow">Questions?</p>
             <h2>Contact PawHaven before sharing sensitive details.</h2>
             <p>
-              The support form is not connected until a form service or inbox is
-              added.
+              PawHaven should only request the details needed to answer a
+              product, support, or order question.
             </p>
           </div>
           <ButtonLink href="/contact">Contact PawHaven</ButtonLink>

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogArticles } from "@/data/blog";
 import { primaryCategories } from "@/data/categories";
+import { getPublicProducts } from "@/data/products";
 import { siteConfig } from "@/lib/site";
 
 const staticPaths = [
@@ -27,10 +28,15 @@ function toSitemapEntry(
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const publicProducts = getPublicProducts();
+
   return [
     ...staticPaths.map((path) => toSitemapEntry(path, path === "/" ? 1 : 0.8)),
     ...primaryCategories.map((category) =>
       toSitemapEntry(`/categories/${category.id}`, 0.7),
+    ),
+    ...publicProducts.map((product) =>
+      toSitemapEntry(`/products/${product.slug}`, 0.7),
     ),
     ...blogArticles.map((article) => toSitemapEntry(`/blog/${article.slug}`, 0.6)),
   ];

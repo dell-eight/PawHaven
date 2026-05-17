@@ -227,6 +227,6 @@ export const universalTrustCtas = [
   {
     href: "/contact",
     label: "Ask PawHaven support",
-    note: "Use near pre-launch notices, product uncertainty, and support panels.",
+    note: "Use near checkout-preparation notices, product uncertainty, and support panels.",
   },
 ] satisfies LinkCta[];

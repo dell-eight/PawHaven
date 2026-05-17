@@ -1,7 +1,7 @@
 import type { Product } from "@/lib/catalog/types";
 
 const shippingNote =
-  "Shipping estimates will be shown once fulfillment is configured for real orders.";
+  "Shipping estimates will be shown clearly once payment and fulfillment details are finalized.";
 
 const hiddenProductIds = new Set([
   "everyday-no-pull-harness",
@@ -64,7 +64,7 @@ export const products: Product[] = [
       },
       {
         question: "Can the cover be cleaned?",
-        answer: "Current catalog details assume a removable cover design. Confirm the final care label before launch.",
+        answer: "Current catalog details assume a removable cover design. Confirm the final care label before checkout opens.",
       },
     ],
     relatedProductIds: [

@@ -48,8 +48,6 @@ const goodToKnowItems = [
   "Keep packaging until you have checked the item.",
 ];
 
-const productStructuredDataEnabled = false;
-
 function createProductStructuredData(product: NonNullable<ReturnType<typeof getProductBySlug>>) {
   return {
     "@context": "https://schema.org",
@@ -59,7 +57,7 @@ function createProductStructuredData(product: NonNullable<ReturnType<typeof getP
       name: siteConfig.name,
     },
     category: getCategoryName(product.category),
-    description: product.shortDescription,
+    description: product.benefitSubtitle ?? product.shortDescription,
     name: product.name,
     url: `${siteConfig.url}/products/${product.slug}`,
   };
@@ -84,15 +82,12 @@ export async function generateMetadata({
   }
 
   const categoryName = getCategoryName(product.category);
+  const description = `${product.benefitSubtitle ?? product.shortDescription} Browse this PawHaven ${categoryName.toLowerCase()} pick for pet parents in the Philippines.`;
 
   return createSeoMetadata({
     title: product.name,
-    description: `${product.shortDescription} Shop this ${categoryName.toLowerCase()} essential from PawHaven.`,
+    description,
     path: `/products/${product.slug}`,
-    robots: {
-      follow: false,
-      index: false,
-    },
   });
 }
 
@@ -112,14 +107,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <main>
-      {productStructuredDataEnabled ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(createProductStructuredData(product)),
-          }}
-        />
-      ) : null}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(createProductStructuredData(product)),
+        }}
+      />
       <section className="product-hero" aria-labelledby="product-title">
         <div className="container product-hero__inner">
           <div className="product-hero__media">
@@ -151,7 +144,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             <ul className="product-hero__trust-list">
               <li>See benefits, care notes, sizing guidance, and delivery details.</li>
-              <li>Cart is active for planning; checkout is not configured yet.</li>
+              <li>
+                PawHaven is currently preparing its full checkout experience.
+                Product pages are available for browsing while payment and
+                fulfillment details are finalized.
+              </li>
             </ul>
 
             <AddToCartButton productId={product.id} />
@@ -223,9 +220,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <article className="product-info-panel">
             <h2>Delivery & support</h2>
             <p>
-              PawHaven is preparing a Philippines-friendly checkout and
-              fulfillment flow. Final delivery estimates should be shown clearly
-              before accepting real orders.
+              PawHaven is preparing a Philippines-friendly checkout and support
+              flow. Final delivery estimates should be shown clearly before any
+              customer order is accepted.
             </p>
             <p>{product.shippingNote}</p>
             <p>
