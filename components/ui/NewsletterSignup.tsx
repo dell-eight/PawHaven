@@ -13,10 +13,10 @@ type NewsletterSignupProps = {
 };
 
 export function NewsletterSignup({
-  buttonLabel = "Join the PawNest List",
+  buttonLabel = "Join the PawHaven List",
   description,
   incentive = "Get early access to new arrivals and bundle offers.",
-  note = "No spam. Just practical pet-parent tips and PawNest updates.",
+  note = "No spam. Just practical pet-parent tips and PawHaven updates.",
   placeholder = "Email address",
   title,
 }: NewsletterSignupProps) {
@@ -50,7 +50,7 @@ export function NewsletterSignup({
         <p className="newsletter-signup__note">{note}</p>
         {hasSubmitted ? (
           <p className="newsletter-signup__success" role="status">
-            Thanks for joining the PawNest list preview. Connect an email
+            Thanks for joining the PawHaven list preview. Connect an email
             provider before saving real subscribers.
           </p>
         ) : null}

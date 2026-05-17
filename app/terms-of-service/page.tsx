@@ -7,22 +7,22 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "Terms of Service",
   description:
-    "Read PawNest terms of service guidance for the pre-launch storefront. Final legal terms are required before accepting real orders.",
+    "Read PawHaven terms of service guidance for the pre-launch storefront. Final legal terms are required before accepting real orders.",
   path: "/terms-of-service",
 });
 
 const termsSections = [
   {
     title: "Pre-launch status",
-    copy: "PawNest is currently a pre-launch storefront. Checkout, payment, fulfillment, and final legal terms must be configured before accepting real orders.",
+    copy: "PawHaven is currently a pre-launch storefront. Checkout, payment, fulfillment, and final legal terms must be configured before accepting real orders.",
   },
   {
     title: "Product information",
-    copy: "PawNest product pages are intended to describe pet accessories clearly. Product colors, sizing, and supplier details should be reviewed before launch.",
+    copy: "PawHaven product pages are intended to describe pet accessories clearly. Product colors, sizing, and supplier details should be reviewed before launch.",
   },
   {
     title: "No medical claims",
-    copy: "PawNest does not sell pet food, treats, supplements, medicine, prescription products, or medical devices, and does not make risky health claims.",
+    copy: "PawHaven does not sell pet food, treats, supplements, medicine, prescription products, or medical devices, and does not make risky health claims.",
   },
   {
     title: "Orders and payments",
@@ -36,7 +36,7 @@ export default function TermsOfServicePage() {
       <PageHeader
         eyebrow="Policy"
         title="Terms of Service"
-        description="PawNest terms should be finalized before real payments, orders, shipping, and returns are enabled."
+        description="PawHaven terms should be finalized before real payments, orders, shipping, and returns are enabled."
       />
       <Section tone="white">
         <SectionHeader
@@ -59,7 +59,7 @@ export default function TermsOfServicePage() {
             <p className="eyebrow">Need help?</p>
             <h2>Review FAQ or contact support.</h2>
             <p>
-              PawNest keeps checkout and payment limitations visible until the
+              PawHaven keeps checkout and payment limitations visible until the
               store is ready for real orders.
             </p>
           </div>

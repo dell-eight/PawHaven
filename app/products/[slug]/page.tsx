@@ -13,8 +13,8 @@ import { getCategoryName, isPrimaryCategoryId } from "@/data/categories";
 import { categorySeoCtas, universalTrustCtas } from "@/data/ctas";
 import {
   getProductBySlug,
+  getPublicProducts,
   getRelatedProducts,
-  products,
 } from "@/data/products";
 import { createSeoMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
@@ -54,7 +54,7 @@ function createProductStructuredData(product: NonNullable<ReturnType<typeof getP
 }
 
 export function generateStaticParams() {
-  return products.map((product) => ({
+  return getPublicProducts().map((product) => ({
     slug: product.slug,
   }));
 }
@@ -75,7 +75,7 @@ export async function generateMetadata({
 
   return createSeoMetadata({
     title: product.name,
-    description: `${product.shortDescription} Shop this ${categoryName.toLowerCase()} essential from PawNest.`,
+    description: `${product.shortDescription} Shop this ${categoryName.toLowerCase()} essential from PawHaven.`,
     path: `/products/${product.slug}`,
     robots: {
       follow: false,
@@ -220,7 +220,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <SectionHeader
           eyebrow="Product FAQ"
           title="Helpful details before you choose."
-          description="Clear product notes help keep PawNest practical, honest, and easy to shop."
+          description="Clear product notes help keep PawHaven practical, honest, and easy to shop."
         />
         <FaqAccordion items={product.faqs} />
       </Section>
@@ -243,7 +243,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <Section tone="beige">
         <NewsletterSignup
           title="Get cozy pet-parent tips and product picks."
-          description="Join PawNest for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
+          description="Join PawHaven for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
         />
       </Section>
 

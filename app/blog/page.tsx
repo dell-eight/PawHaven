@@ -7,9 +7,9 @@ import { blogArticles } from "@/data/blog";
 import { createSeoMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "PawNest Blog",
+  title: "PawHaven Blog",
   description:
-    "Beginner-friendly pet home-care tips for cleaner homes, cozy pet spaces, walking, travel, organization, grooming, and cat or dog accessories.",
+    "Beginner-friendly pet home-care tips for cleaner homes, cozy pet spaces, cat essentials, grooming, walking, and travel.",
   path: "/blog",
 });
 
@@ -21,16 +21,16 @@ export default function BlogPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="PawNest Blog"
+        eyebrow="PawHaven Blog"
         title="Helpful pet-home tips for cleaner, cozier routines."
-        description="Beginner-friendly guides for pet accessories, clean-home habits, cozy spaces, walking, travel, organization, and everyday dog and cat care."
+        description="Beginner-friendly guides for cleaner-home habits, cozy spaces, cat essentials, walking, travel, and everyday pet care."
       />
 
       <Section tone="white">
         <SectionHeader
           eyebrow="Starter guides"
           title="Learn by routine."
-          description="Explore practical, non-medical articles focused on home-care, comfort, grooming, organization, walking, travel, and pet-parent education."
+          description="Explore practical, non-medical articles focused on home care, comfort, cat routines, grooming, walking, travel, and pet-parent education."
         />
         <div className="blog-category-labels" aria-label="Blog categories">
           {articleCategories.map((category) => (
@@ -46,7 +46,7 @@ export default function BlogPage() {
       <Section tone="beige">
         <NewsletterSignup
           title="Get cozy pet-parent tips and product picks."
-          description="Join PawNest for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
+          description="Join PawHaven for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
         />
       </Section>
     </main>

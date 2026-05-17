@@ -8,19 +8,19 @@ export type CategoryPageContent = {
 export const categories = [
   {
     id: "cozy-comfort",
-    name: "Comfort Products for Pets",
+    name: "Cozy Rest",
     description:
-      "Soft beds, blankets, and comfort accessories for calmer pet spaces.",
+      "Soft beds, blankets, and comfort layers for calmer pet spaces.",
   },
   {
     id: "grooming-clean-home",
-    name: "Grooming Products",
+    name: "Cleaner Home",
     description:
-      "Practical grooming and pet hair cleanup tools for everyday care.",
+      "Pet hair, paw cleanup, and feeding-zone helpers for easier home care.",
   },
   {
     id: "walk-travel",
-    name: "Walk & Travel Products",
+    name: "Walk & Travel",
     description: "Accessories for easier walks, outings, and pet travel.",
   },
   {
@@ -35,7 +35,7 @@ export const categories = [
   },
   {
     id: "home-organization",
-    name: "Home Organization",
+    name: "Feeding & Home Setup",
     description: "Storage and setup helpers for pet supplies at home.",
   },
   {
@@ -46,10 +46,10 @@ export const categories = [
 ] satisfies Category[];
 
 export const primaryCategoryIds = [
-  "walk-travel",
+  "cat-essentials",
   "cozy-comfort",
   "grooming-clean-home",
-  "cat-essentials",
+  "walk-travel",
 ] satisfies Category["id"][];
 
 export function isPrimaryCategoryId(
@@ -83,11 +83,11 @@ export const categoryPageContent = {
     ],
   },
   "grooming-clean-home": {
-    intro: "For pet parents who want less fur, less mess, and a fresher home.",
+    intro: "For pet parents who want less fur, fewer muddy paw prints, and tidier feeding zones.",
     benefits: [
       "Support quick pet hair touch-ups between deeper cleans",
-      "Keep grooming tools close to high-traffic pet areas",
-      "Make everyday cleanup routines feel more manageable",
+      "Keep paw, coat, and bowl-area cleanup close to where mess starts",
+      "Make everyday cleaner-home routines feel more manageable",
     ],
   },
   "walk-travel": {

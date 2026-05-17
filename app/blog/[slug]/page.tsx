@@ -105,7 +105,7 @@ export default async function BlogArticlePage({
         <Section tone="beige">
           <SectionHeader
             eyebrow="Related articles"
-            title="Keep learning with PawNest."
+            title="Keep learning with PawHaven."
             description="Explore more beginner-friendly guidance for cleaner spaces, cozy routines, and practical pet accessories."
           />
           <div className="blog-grid blog-grid--compact">

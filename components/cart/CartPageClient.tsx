@@ -34,7 +34,7 @@ export function CartPageClient() {
       <div className="cart-empty">
         <h2>Your cart is waiting for something cozy, practical, and pet-parent approved.</h2>
         <p>
-          Browse PawNest essentials for cleaner spaces, easier walks, cozy
+          Browse PawHaven essentials for cleaner spaces, easier walks, cozy
           corners, and everyday pet-care routines.
         </p>
         <p className="cart-summary__checkout-note">

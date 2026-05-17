@@ -6,23 +6,23 @@ export type NavLink = {
 export const mainNavLinks = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
-  { href: "/categories/cozy-comfort", label: "Pet Comfort" },
+  { href: "/categories/cat-essentials", label: "Cat Essentials" },
+  { href: "/categories/cozy-comfort", label: "Cozy Rest" },
   {
     href: "/categories/grooming-clean-home",
-    label: "Grooming",
+    label: "Cleaner Home",
   },
   { href: "/categories/walk-travel", label: "Walk & Travel" },
-  { href: "/categories/cat-essentials", label: "Cat Essentials" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ] satisfies NavLink[];
 
 export const footerShopLinks = [
   { href: "/shop", label: "Shop All" },
-  { href: "/categories/cozy-comfort", label: "Comfort Products for Pets" },
-  { href: "/categories/grooming-clean-home", label: "Grooming Products" },
-  { href: "/categories/walk-travel", label: "Walk & Travel Products" },
   { href: "/categories/cat-essentials", label: "Cat Essentials" },
+  { href: "/categories/cozy-comfort", label: "Cozy Rest" },
+  { href: "/categories/grooming-clean-home", label: "Cleaner Home" },
+  { href: "/categories/walk-travel", label: "Walk & Travel" },
 ] satisfies NavLink[];
 
 export const footerCareLinks = [
@@ -32,7 +32,7 @@ export const footerCareLinks = [
 ] satisfies NavLink[];
 
 export const footerAboutLinks = [
-  { href: "/about", label: "About PawNest" },
+  { href: "/about", label: "About PawHaven" },
   { href: "/blog", label: "Blog" },
 ] satisfies NavLink[];
 

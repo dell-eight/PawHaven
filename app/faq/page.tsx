@@ -9,7 +9,7 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "FAQ",
   description:
-    "Read PawNest FAQ answers about orders, shipping, returns, products, safety claims, payments, and pet sizing.",
+    "Read PawHaven FAQ answers about orders, shipping, returns, products, safety claims, payments, and pet sizing.",
   path: "/faq",
 });
 
@@ -18,7 +18,7 @@ export default function FaqPage() {
     <main>
       <PageHeader
         eyebrow="Help center"
-        title="PawNest FAQ"
+        title="PawHaven FAQ"
         description="Honest answers about orders, shipping, returns, products, product claims, payments, and choosing the right size."
       />
 
@@ -40,13 +40,13 @@ export default function FaqPage() {
         <div className="support-faq-cta">
           <div>
             <p className="eyebrow">Still need help?</p>
-            <h2>Send PawNest a message.</h2>
+            <h2>Send PawHaven a message.</h2>
             <p>
               Share the product name, sizing question, or order details if
-              available, and PawNest support can help from there.
+              available, and PawHaven support can help from there.
             </p>
           </div>
-          <ButtonLink href="/contact">Contact PawNest</ButtonLink>
+          <ButtonLink href="/contact">Contact PawHaven</ButtonLink>
         </div>
       </Section>
     </main>

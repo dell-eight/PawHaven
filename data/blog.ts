@@ -31,7 +31,7 @@ export const blogArticles = [
       },
       {
         heading: "Make cleanup tools easy to reach",
-        body: "Pet hair tools work best when they are stored where you actually need them. Try keeping lint roller refills near your closet, a paw cleaning cup by the door, and a grooming glove near your pet's favorite rest spot.",
+        body: "Pet hair tools work best when they are stored where you actually need them. Try keeping a reusable hair remover near the sofa, a paw cleaning cup by the door, and a grooming glove near your pet's favorite rest spot.",
       },
       {
         heading: "Use washable layers",
@@ -46,19 +46,19 @@ export const blogArticles = [
       "Compact, practical pet accessories that help small homes feel tidy, cozy, and easier to share with dogs or cats.",
     category: "Apartment Pets",
     readingTime: "4 min read",
-    relatedProductCategory: "home-organization",
+    relatedProductCategory: "grooming-clean-home",
     contentSections: [
       {
         heading: "Choose items that do more than one job",
-        body: "Small spaces benefit from accessories that are easy to move, store, and clean. Soft blankets can work on sofas or in carriers, while storage baskets can hold toys, leashes, and grooming tools.",
+        body: "Small spaces benefit from accessories that are easy to move, clean, and give a clear job. Soft blankets can work on sofas or in carriers, while feeding mats and paw cleaners help contain everyday mess.",
       },
       {
         heading: "Create clear pet zones",
-        body: "A bed, bowl mat, scratch lounge, or toy basket can give your pet a dedicated area without taking over the room. Defined zones also make daily tidying easier.",
+        body: "A bed, bowl mat, scratch lounge, or window perch can give your pet a dedicated area without taking over the room. Defined zones also make daily tidying easier.",
       },
       {
         heading: "Keep travel and walking gear ready",
-        body: "Apartment pet parents often move through elevators, sidewalks, cars, and errands. A leash, carrier, travel organizer, or portable water bottle can make those transitions feel smoother.",
+        body: "Apartment pet parents often move through elevators, sidewalks, cars, and errands. A carrier, car cover, travel organizer, or portable water bottle can make those transitions feel smoother.",
       },
     ],
   },
@@ -96,7 +96,7 @@ export const blogArticles = [
     contentSections: [
       {
         heading: "Use the right tool for the surface",
-        body: "Reusable hair removers are helpful for sofas and blankets, lint rollers are convenient for clothing, and grooming gloves can collect loose hair during calm grooming moments.",
+        body: "Reusable hair removers are helpful for sofas and blankets, while grooming gloves can collect loose hair during calm grooming moments.",
       },
       {
         heading: "Clean in small passes",
@@ -112,14 +112,14 @@ export const blogArticles = [
     title: "Dog Walking Essentials for New Pet Owners",
     slug: "dog-walking-essentials-for-new-pet-owners",
     excerpt:
-      "A simple starter list for daily dog walks, from adjustable gear to water breaks and post-walk cleanup.",
+      "A simple starter list for daily dog walks, from water breaks to post-walk cleanup.",
     category: "Walking",
     readingTime: "5 min read",
     relatedProductCategory: "walk-travel",
     contentSections: [
       {
-        heading: "Start with fit and comfort",
-        body: "A collar, harness, and leash should be checked against the final size guide before ordering. Fit can vary by product, so measure carefully and inspect gear before walks.",
+        heading: "Start with the routine around the walk",
+        body: "A good walk setup is more than the leash in your hand. Think about water breaks, muddy paws, car seats, and where the outing gear lands when you get home.",
       },
       {
         heading: "Pack for simple outdoor breaks",
@@ -135,7 +135,7 @@ export const blogArticles = [
     title: "Cat Home Essentials for a Cozy Space",
     slug: "cat-home-essentials-for-a-cozy-space",
     excerpt:
-      "Practical cat-friendly home ideas for lounging, scratching, window watching, play, and storage.",
+      "Practical cat-friendly home ideas for lounging, scratching, window watching, and cozy small-space routines.",
     category: "Cat Essentials",
     readingTime: "4 min read",
     relatedProductCategory: "cat-essentials",
@@ -149,8 +149,8 @@ export const blogArticles = [
         body: "A scratching lounge gives cats a dedicated accessory for scratching and stretching. Placement matters, and every cat has different preferences.",
       },
       {
-        heading: "Keep toys easy to rotate",
-        body: "A small storage basket helps keep cat toys tidy while making it easy to rotate options for supervised play and everyday enrichment.",
+        heading: "Keep cat zones easy to refresh",
+        body: "A washable blanket or defined lounge area helps cat corners feel intentional instead of scattered across the room.",
       },
     ],
   },
@@ -161,19 +161,19 @@ export const blogArticles = [
       "Easy organization ideas for leashes, toys, blankets, grooming tools, feeding mats, and travel accessories.",
     category: "Organization",
     readingTime: "4 min read",
-    relatedProductCategory: "home-organization",
+    relatedProductCategory: "grooming-clean-home",
     contentSections: [
       {
         heading: "Group supplies by routine",
-        body: "Store walking gear near the door, grooming tools near favorite rest spots, and feeding mats near bowls. Grouping items by routine makes pet care feel more automatic.",
+        body: "Store cleanup tools near the door, grooming tools near favorite rest spots, and feeding mats near bowls. Grouping items by routine makes pet care feel more automatic.",
       },
       {
-        heading: "Use open storage for daily items",
-        body: "Baskets work well for toys, blankets, leashes, and other lightweight accessories. Open storage is easy to use and easy to tidy at the end of the day.",
+        heading: "Use defined zones for daily mess",
+        body: "A feeding mat, washable blanket, or dedicated cat lounge gives daily pet mess a more predictable place to land.",
       },
       {
         heading: "Keep travel gear packed between outings",
-        body: "A travel organizer can hold allowed accessories like leashes, blankets, cleanup tools, and water bottles so you are not repacking from scratch every time.",
+        body: "A travel organizer can hold allowed accessories like blankets, cleanup tools, and water bottles so you are not repacking from scratch every time.",
       },
     ],
   },
@@ -192,7 +192,7 @@ export const blogArticles = [
       },
       {
         heading: "Check size and fit details",
-        body: "Carriers, harnesses, collars, and travel accessories should be checked against final measurements before ordering. Product fit can vary by supplier and item style.",
+        body: "Carriers, car covers, perches, and travel accessories should be checked against final measurements before ordering. Product fit can vary by supplier and item style.",
       },
       {
         heading: "Keep the car and bag easier to clean",

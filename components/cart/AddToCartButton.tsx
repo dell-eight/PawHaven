@@ -18,7 +18,7 @@ export function AddToCartButton({ productId }: AddToCartButtonProps) {
         fullWidth
         onClick={() => {
           addItem(productId);
-          setStatus("Added to your PawNest cart.");
+          setStatus("Added to your PawHaven cart.");
         }}
         type="button"
       >

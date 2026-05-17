@@ -20,17 +20,17 @@ export type CategorySeoCta = {
 export const categorySeoCtas = {
   "walk-travel": {
     blogDescription:
-      "Move from walking and travel advice into practical products like harnesses, leashes, carriers, car covers, water bottles, and organizer bags.",
-    blogTitle: "Shop dog walking and pet travel accessories.",
-    cardLabel: "Shop walk & travel gear",
+      "Move from walking and travel advice into practical products like carriers, car covers, water bottles, and organizer bags.",
+    blogTitle: "Shop walk and travel convenience products.",
+    cardLabel: "Shop walk & travel",
     collectionDescription:
-      "Browse practical dog walking accessories and pet travel products for daily walks, car rides, errands, and short trips.",
-    collectionTitle: "Find easier dog walking and pet travel gear.",
+      "Browse practical pet travel and outing products for water breaks, car rides, errands, and short trips.",
+    collectionTitle: "Make walks, car rides, and short trips easier.",
     emptyProductCtas: [
       {
         href: "/categories/walk-travel",
         label: "Browse walking and travel accessories",
-        note: "Use when travel carriers, leashes, harnesses, water bottles, or car accessories are ready.",
+        note: "Use when travel carriers, water bottles, car covers, or organizer bags are ready.",
       },
       {
         href: "/blog/dog-walking-essentials-for-new-pet-owners",
@@ -39,7 +39,7 @@ export const categorySeoCtas = {
     ],
     primary: {
       href: "/categories/walk-travel",
-      label: "Shop walk & travel products",
+      label: "Shop walk & travel",
     },
     secondary: {
       href: "/blog/travel-accessories-that-make-pet-outings-easier",
@@ -49,8 +49,8 @@ export const categorySeoCtas = {
   "cozy-comfort": {
     blogDescription:
       "Turn comfort guidance into product discovery for pet beds, washable blankets, fleece layers, and soft home essentials.",
-    blogTitle: "Shop cozy pet comfort products.",
-    cardLabel: "Shop pet comfort products",
+    blogTitle: "Shop cozy rest products.",
+    cardLabel: "Shop cozy rest",
     collectionDescription:
       "Explore cozy pet beds, pet blankets, and comfort accessories for calmer pet corners, sofas, crates, carriers, and shared homes.",
     collectionTitle: "Create a softer everyday rest spot.",
@@ -67,7 +67,7 @@ export const categorySeoCtas = {
     ],
     primary: {
       href: "/categories/cozy-comfort",
-      label: "Shop comfort products for pets",
+      label: "Shop cozy rest",
     },
     secondary: {
       href: "/blog/how-to-choose-a-cozy-pet-bed",
@@ -77,16 +77,16 @@ export const categorySeoCtas = {
   "grooming-clean-home": {
     blogDescription:
       "Connect cleanup articles to grooming and pet hair tools that support cleaner sofas, entryways, blankets, and clothing.",
-    blogTitle: "Shop grooming and pet hair cleanup products.",
-    cardLabel: "Shop grooming products",
+    blogTitle: "Shop cleaner-home pet products.",
+    cardLabel: "Shop cleaner home",
     collectionDescription:
-      "Shop grooming products, pet hair removers, lint roller refills, grooming gloves, and paw cleanup tools for cleaner everyday routines.",
-    collectionTitle: "Keep grooming and pet hair cleanup simple.",
+      "Shop pet hair removers, grooming gloves, paw cleanup tools, and feeding-zone mats for cleaner everyday routines.",
+    collectionTitle: "Reduce pet mess where it starts.",
     emptyProductCtas: [
       {
         href: "/categories/grooming-clean-home",
-        label: "Browse grooming and cleanup tools",
-        note: "Use when brushes, grooming gloves, lint tools, paw cleaners, or cleanup accessories are ready.",
+        label: "Browse cleaner-home tools",
+        note: "Use when brushes, grooming gloves, paw cleaners, mats, or cleanup accessories are ready.",
       },
       {
         href: "/blog/pet-hair-removal-tips-for-busy-pet-parents",
@@ -95,7 +95,7 @@ export const categorySeoCtas = {
     ],
     primary: {
       href: "/categories/grooming-clean-home",
-      label: "Shop grooming products",
+      label: "Shop cleaner-home products",
     },
     secondary: {
       href: "/blog/how-to-keep-a-cleaner-home-with-pets",
@@ -222,11 +222,11 @@ export const universalTrustCtas = [
   {
     href: "/faq",
     label: "Read sizing and fit FAQs",
-    note: "Use near harnesses, collars, carriers, beds, and perches.",
+    note: "Use near carriers, beds, perches, mats, and fit-sensitive products.",
   },
   {
     href: "/contact",
-    label: "Ask PawNest support",
+    label: "Ask PawHaven support",
     note: "Use near pre-launch notices, product uncertainty, and support panels.",
   },
 ] satisfies LinkCta[];

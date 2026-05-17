@@ -7,18 +7,18 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "Privacy Policy",
   description:
-    "Read PawNest privacy policy guidance for the pre-launch storefront. Final legal policy review is required before accepting real orders.",
+    "Read PawHaven privacy policy guidance for the pre-launch storefront. Final legal policy review is required before accepting real orders.",
   path: "/privacy-policy",
 });
 
 const privacySections = [
   {
     title: "Pre-launch status",
-    copy: "This PawNest storefront is not accepting real orders yet. Privacy language should be reviewed and finalized before collecting real customer data, accepting orders, or connecting email and payment providers.",
+    copy: "This PawHaven storefront is not accepting real orders yet. Privacy language should be reviewed and finalized before collecting real customer data, accepting orders, or connecting email and payment providers.",
   },
   {
     title: "Information customers may provide",
-    copy: "Once configured, PawNest may collect information such as name, email address, shipping details, order details, support messages, and newsletter signup information.",
+    copy: "Once configured, PawHaven may collect information such as name, email address, shipping details, order details, support messages, and newsletter signup information.",
   },
   {
     title: "How information may be used",
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
       <PageHeader
         eyebrow="Policy"
         title="Privacy Policy"
-        description="A clear privacy policy is required before PawNest collects real customer data or accepts real orders."
+        description="A clear privacy policy is required before PawHaven collects real customer data or accepts real orders."
       />
       <Section tone="white">
         <SectionHeader
@@ -57,13 +57,13 @@ export default function PrivacyPolicyPage() {
         <div className="policy-support">
           <div>
             <p className="eyebrow">Questions?</p>
-            <h2>Contact PawNest before sharing sensitive details.</h2>
+            <h2>Contact PawHaven before sharing sensitive details.</h2>
             <p>
               The support form is not connected until a form service or inbox is
               added.
             </p>
           </div>
-          <ButtonLink href="/contact">Contact PawNest</ButtonLink>
+          <ButtonLink href="/contact">Contact PawHaven</ButtonLink>
         </div>
       </Section>
     </main>

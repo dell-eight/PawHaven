@@ -7,9 +7,9 @@ import { TrustBadgeList } from "@/components/ui/TrustBadge";
 import { createSeoMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "About PawNest",
+  title: "About PawHaven",
   description:
-    "Learn how PawNest helps pet parents create cleaner, cozier, and more practical homes with thoughtfully selected pet accessories.",
+    "Learn how PawHaven helps pet parents create cleaner, cozier, and more practical homes with thoughtfully selected pet accessories.",
   path: "/about",
 });
 
@@ -22,10 +22,10 @@ const audienceItems = [
 
 const sellsItems = [
   "Cozy pet beds and blankets",
-  "Grooming tools, pet hair removers, and lint rollers",
-  "Leashes, harnesses, collars, carriers, and travel accessories",
-  "Toys, scratching pieces, pet mats, and organization products",
-  "Pet safety accessories and clean-home helpers",
+  "Pet hair removers, grooming gloves, and paw cleanup tools",
+  "Cat scratching lounges, window perches, and cozy cat corners",
+  "Feeding mats and small-space cleaner-home helpers",
+  "Carriers, car seat covers, water bottles, and travel organization",
 ];
 
 const doesNotSellItems = [
@@ -41,7 +41,7 @@ const doesNotSellItems = [
 const valueItems = [
   {
     title: "Practical first",
-    copy: "Every PawNest category starts with a real pet-home routine: cleaning, walking, travel, comfort, organization, or play.",
+    copy: "Every PawHaven category starts with a real pet-home routine: comfort, cat lounging, pet hair, muddy paws, feeding mess, or short outings.",
   },
   {
     title: "Warm, not childish",
@@ -49,7 +49,7 @@ const valueItems = [
   },
   {
     title: "Clear limits",
-    copy: "PawNest avoids risky product categories and does not use medical promises to sell everyday accessories.",
+    copy: "PawHaven avoids risky product categories and does not use medical promises to sell everyday accessories.",
   },
   {
     title: "Beginner-friendly",
@@ -61,9 +61,9 @@ export default function AboutPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="About PawNest"
+        eyebrow="About PawHaven"
         title="Cleaner, cozier pet homes start with practical everyday essentials."
-        description="PawNest helps pet parents create cleaner, cozier, and more practical homes through thoughtfully selected pet accessories for dogs, cats, and everyday routines."
+        description="PawHaven helps pet parents create cleaner, cozier, and more practical homes through thoughtfully selected pet accessories for dogs, cats, and everyday routines."
       />
 
       <Section tone="white">
@@ -71,14 +71,14 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Brand story"
             title="Built for the real rhythm of living with pets."
-            description="Pets bring warmth, movement, hair, muddy paws, scattered toys, travel bags, feeding corners, and favorite nap spots. PawNest exists for those small daily moments."
+            description="Pets bring warmth, movement, hair, muddy paws, travel bags, feeding corners, favorite nap spots, and cat windowsills. PawHaven exists for those small daily moments."
           />
           <div className="about-story__copy">
             <p>
-              PawNest is focused on accessories that make pet life feel easier
+              PawHaven is focused on accessories that make pet life feel easier
               at home: soft places to rest, tools for cleaner shared spaces,
-              simple walking gear, travel helpers, and storage that keeps pet
-              supplies easy to find.
+              cat-friendly corners, travel helpers, and small products that
+              reduce everyday pet-home friction.
             </p>
             <p>
               The goal is a store that feels warm and trustworthy from the
@@ -97,8 +97,8 @@ export default function AboutPage() {
             care feel complicated.
           </h2>
           <p>
-            PawNest selects practical accessories for cozy pet spaces, cleaner
-            homes, easier walks and travel, better organization, and simple
+            PawHaven selects practical accessories for cozy pet spaces, cleaner
+            homes, cat-friendly routines, easier walks and travel, and simple
             everyday care.
           </p>
         </div>
@@ -106,9 +106,9 @@ export default function AboutPage() {
 
       <Section>
         <SectionHeader
-          eyebrow="Who PawNest is for"
+          eyebrow="Who PawHaven is for"
           title="Made for everyday pet parents."
-          description="PawNest is shaped around people who want their home to feel welcoming for pets and still easy to maintain."
+          description="PawHaven is shaped around people who want their home to feel welcoming for pets and still easy to maintain."
         />
         <div className="about-card-grid">
           {audienceItems.map((item) => (
@@ -123,9 +123,9 @@ export default function AboutPage() {
         <div className="about-columns">
           <div>
             <SectionHeader
-              eyebrow="What PawNest sells"
+              eyebrow="What PawHaven sells"
               title="Safe, practical pet accessories and home-care helpers."
-              description="The catalog is built around comfort, clean-home routines, walking, travel, play, organization, and pet safety accessories."
+              description="The catalog is built around cat essentials, cozy rest, cleaner-home routines, and walk or travel convenience."
             />
             <ul className="about-check-list">
               {sellsItems.map((item) => (
@@ -136,9 +136,9 @@ export default function AboutPage() {
 
           <div>
             <SectionHeader
-              eyebrow="What PawNest does not sell"
+              eyebrow="What PawHaven does not sell"
               title="Clear boundaries build trust."
-              description="PawNest avoids categories that require health claims, prescriptions, medical endorsements, or risky promises."
+              description="PawHaven avoids categories that require health claims, prescriptions, medical endorsements, or risky promises."
             />
             <ul className="about-exclusion-list">
               {doesNotSellItems.map((item) => (
@@ -153,7 +153,7 @@ export default function AboutPage() {
         <SectionHeader
           eyebrow="Brand values"
           title="Warm, practical, clear, and honest."
-          description="PawNest is designed to feel premium but affordable, cute but not childish, and helpful without overpromising."
+          description="PawHaven is designed to feel premium but affordable, cute but not childish, and helpful without overpromising."
         />
         <div className="about-card-grid">
           {valueItems.map((item) => (
@@ -167,9 +167,9 @@ export default function AboutPage() {
 
       <Section>
         <SectionHeader
-          eyebrow="Why pet parents can trust PawNest"
+          eyebrow="Why pet parents can trust PawHaven"
           title="Clear product roles, clear limits, and no risky claims."
-          description="PawNest keeps trust simple: explain what each product is for, avoid unsafe promises, and stay honest about what the store is ready to do."
+          description="PawHaven keeps trust simple: explain what each product is for, avoid unsafe promises, and stay honest about what the store is ready to do."
         />
         <TrustBadgeList
           badges={[
@@ -181,14 +181,14 @@ export default function AboutPage() {
       </Section>
 
       <CtaSection
-        eyebrow="Explore PawNest"
+        eyebrow="Explore PawHaven"
         title="Shop practical essentials for a cleaner, cozier pet home."
-        description="Browse accessories for comfort, clean-home routines, walks, travel, play, organization, and everyday pet care."
+        description="Browse accessories for cat comfort, cozy rest, cleaner-home routines, walks, travel, and everyday pet care."
         actions={
           <>
-            <ButtonLink href="/shop">Shop PawNest Essentials</ButtonLink>
+            <ButtonLink href="/shop">Shop PawHaven Essentials</ButtonLink>
             <ButtonLink href="/categories/cozy-comfort" variant="secondary">
-              Start With Cozy Comfort
+              Start With Cozy Rest
             </ButtonLink>
           </>
         }

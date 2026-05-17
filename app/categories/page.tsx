@@ -7,9 +7,9 @@ import { categorySeoCtas } from "@/data/ctas";
 import { createSeoMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "PawNest Categories",
+  title: "PawHaven Categories",
   description:
-    "Explore PawNest pet accessory categories for walk and travel products, comfort products for pets, grooming products, and cat essentials.",
+    "Explore PawHaven collections for cat essentials, cozy rest, cleaner-home helpers, and walk and travel convenience products.",
   path: "/categories",
 });
 
@@ -18,8 +18,8 @@ export default function CategoriesPage() {
     <main>
       <PageHeader
         eyebrow="Categories"
-        title="Explore PawNest categories."
-        description="Browse practical pet accessories by routine: walk and travel, pet comfort, grooming, and cat essentials."
+        title="Explore PawHaven categories."
+        description="Browse cozy essentials by routine: cat comfort, soft rest spots, cleaner homes, and easier outings."
       />
       <Section tone="white">
         <SectionHeader

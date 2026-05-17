@@ -7,14 +7,14 @@ export default function BlogArticleNotFound() {
     <main>
       <PageHeader
         eyebrow="Article not found"
-        title="We could not find that PawNest article."
-        description="The guide may have moved, or it may not be part of the current PawNest blog plan."
+        title="We could not find that PawHaven article."
+        description="The guide may have moved, or it may not be part of the current PawHaven blog plan."
       />
       <Section tone="white">
         <div className="not-found-actions">
           <ButtonLink href="/blog">Back to Blog</ButtonLink>
           <ButtonLink href="/shop" variant="secondary">
-            Shop PawNest
+            Shop PawHaven
           </ButtonLink>
         </div>
       </Section>

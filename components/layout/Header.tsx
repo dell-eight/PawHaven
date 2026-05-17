@@ -11,8 +11,8 @@ export function Header() {
         Cozy, practical pet essentials for a cleaner, happier home.
       </div>
       <Container className="site-header__inner">
-        <Link className="site-header__logo" href="/" aria-label="PawNest home">
-          PawNest
+        <Link className="site-header__logo" href="/" aria-label="PawHaven home">
+          PawHaven
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">

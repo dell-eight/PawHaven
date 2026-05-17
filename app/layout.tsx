@@ -21,7 +21,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "PawNest | Cozy Pet Accessories for Cleaner, Happier Homes",
+    default: "PawHaven | Cozy Essentials for Happier Pets and Cleaner Homes",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -29,12 +29,13 @@ export const metadata: Metadata = {
   keywords: [
     "pet accessories",
     "pet home care",
-    "dog accessories",
-    "cat accessories",
-    "pet organization",
+    "cat essentials",
+    "pet comfort",
+    "pet hair remover",
+    "cleaner home pets",
   ],
   openGraph: {
-    title: "PawNest | Cozy Pet Accessories for Cleaner, Happier Homes",
+    title: "PawHaven | Cozy Essentials for Happier Pets and Cleaner Homes",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "PawNest | Cozy Pet Accessories for Cleaner, Happier Homes",
+    title: "PawHaven | Cozy Essentials for Happier Pets and Cleaner Homes",
     description: siteConfig.description,
   },
 };

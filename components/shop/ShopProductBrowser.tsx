@@ -89,7 +89,7 @@ export function ShopProductBrowser({
             <span>Search</span>
             <input
               onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder="Beds, leashes, cleaning..."
+              placeholder="Cat perch, hair, bed..."
               type="search"
               value={searchQuery}
             />
@@ -114,7 +114,7 @@ export function ShopProductBrowser({
       </div>
 
       <p className="shop-browser__count">
-        Showing {filteredProducts.length} of {products.length} PawNest products
+        Showing {filteredProducts.length} of {products.length} PawHaven products
       </p>
 
       {filteredProducts.length > 0 ? (
@@ -128,7 +128,7 @@ export function ShopProductBrowser({
           <h2>No products found</h2>
           <p>
             Try a different search or category to browse more cozy, practical
-            PawNest essentials.
+            PawHaven essentials.
           </p>
         </div>
       )}

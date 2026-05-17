@@ -103,7 +103,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="category-empty">
             <h2>More products are being selected.</h2>
             <p>
-              This category is part of the PawNest catalog plan, but no products
+              This category is part of the PawHaven catalog plan, but no products
               are currently assigned to it.
             </p>
             <div className="category-empty__actions">
@@ -122,7 +122,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <SectionHeader
             eyebrow="Why this category helps"
             title="Make this pet-care routine feel easier."
-            description="Each PawNest category is built around practical pet-home needs, clear product roles, and warm everyday use."
+            description="Each PawHaven category is built around practical pet-home needs, clear product roles, and warm everyday use."
           />
           <ul className="category-benefits__list">
             {content.benefits.map((benefit) => (
@@ -135,8 +135,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Section>
         <SectionHeader
           eyebrow="Related categories"
-          title="Keep exploring PawNest routines."
-          description="Move between cozy, clean-home, walking, travel, play, organization, and safety essentials."
+          title="Keep exploring PawHaven routines."
+          description="Move between cat essentials, cozy rest, cleaner-home helpers, and walk or travel convenience products."
         />
         <div className="card-grid card-grid--3">
           {relatedCategories.map((relatedCategory) => (
@@ -168,7 +168,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <Section tone="beige">
         <NewsletterSignup
           title="Get cozy pet-parent tips and product picks."
-          description="Join PawNest for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
+          description="Join PawHaven for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
         />
       </Section>
 
@@ -180,7 +180,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <>
             <ButtonLink href={seoCta.primary.href}>{seoCta.primary.label}</ButtonLink>
             <ButtonLink href="/shop" variant="secondary">
-              Shop all PawNest products
+              Shop all PawHaven products
             </ButtonLink>
           </>
         }

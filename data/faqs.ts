@@ -11,9 +11,9 @@ export const faqSections = [
     title: "Orders",
     items: [
       {
-        question: "Can I place a real PawNest order right now?",
+        question: "Can I place a real PawHaven order right now?",
         answer:
-          "This storefront is still pre-launch. Checkout and payment must be configured before PawNest can accept real orders.",
+          "This storefront is still pre-launch. Checkout and payment must be configured before PawHaven can accept real orders.",
       },
       {
         question: "Where can I include order details when contacting support?",
@@ -28,7 +28,7 @@ export const faqSections = [
       {
         question: "How long does shipping take?",
         answer:
-          "Shipping times depend on the final fulfillment setup, destination, and carrier. PawNest will show clear shipping expectations before accepting real orders.",
+          "Shipping times depend on the final fulfillment setup, destination, and carrier. PawHaven will show clear shipping expectations before accepting real orders.",
       },
       {
         question: "Are shipping notes final?",
@@ -41,9 +41,9 @@ export const faqSections = [
     title: "Returns",
     items: [
       {
-        question: "What is the PawNest return policy?",
+        question: "What is the PawHaven return policy?",
         answer:
-          "The final returns policy should be reviewed before launch. PawNest aims to keep returns clear, fair, and easy to understand before any real purchase is made.",
+          "The final returns policy should be reviewed before launch. PawHaven aims to keep returns clear, fair, and easy to understand before any real purchase is made.",
       },
       {
         question: "What if an item arrives damaged?",
@@ -56,14 +56,14 @@ export const faqSections = [
     title: "Products",
     items: [
       {
-        question: "What products does PawNest sell?",
+        question: "What products does PawHaven sell?",
         answer:
-          "PawNest focuses on pet accessories and home-care products such as beds, blankets, grooming tools, pet hair removers, carriers, leashes, harnesses, toys, mats, organization products, scratching pieces, and safety accessories.",
+          "PawHaven focuses on cozy pet comfort, cat essentials, cleaner-home products, and useful outing accessories such as beds, blankets, pet hair removers, grooming gloves, paw cleaners, feeding mats, scratching lounges, window perches, carriers, car covers, and portable water bottles.",
       },
       {
         question: "Will product colors look exactly like the photos?",
         answer:
-          "Product colors may vary slightly depending on screen settings, lighting, and supplier photos. PawNest should use clear images and honest descriptions before launch.",
+          "Product colors may vary slightly depending on screen settings, lighting, and supplier photos. PawHaven should use clear images and honest descriptions before launch.",
       },
     ],
   },
@@ -71,14 +71,14 @@ export const faqSections = [
     title: "Safety and product claims",
     items: [
       {
-        question: "Does PawNest make medical claims?",
+        question: "Does PawHaven make medical claims?",
         answer:
-          "No. PawNest does not claim that products cure anxiety, illness, behavior problems, or medical conditions.",
+          "No. PawHaven does not claim that products cure anxiety, illness, behavior problems, or medical conditions.",
       },
       {
-        question: "What does PawNest avoid selling?",
+        question: "What does PawHaven avoid selling?",
         answer:
-          "PawNest avoids pet food, treats, supplements, medicine, prescription products, medical devices, and products that need risky health claims.",
+          "PawHaven avoids pet food, treats, supplements, medicine, prescription products, medical devices, and products that need risky health claims.",
       },
     ],
   },
@@ -93,7 +93,7 @@ export const faqSections = [
       {
         question: "Why is checkout disabled?",
         answer:
-          "The cart UI is present for storefront planning, but checkout integration is not active yet. PawNest should not accept payment until the payment provider is connected.",
+          "The cart UI is present for storefront planning, but checkout integration is not active yet. PawHaven should not accept payment until the payment provider is connected.",
       },
     ],
   },
@@ -101,14 +101,14 @@ export const faqSections = [
     title: "Pet sizing",
     items: [
       {
-        question: "How should I choose a size for harnesses, collars, or beds?",
+        question: "How should I choose a size for beds, carriers, or window perches?",
         answer:
           "Check the product size guide before ordering and measure your pet carefully. Fit can vary by product and supplier.",
       },
       {
         question: "What if my pet is between sizes?",
         answer:
-          "Review the final product-specific sizing guidance before purchase. If unsure, contact PawNest support with your pet measurements and the product name.",
+          "Review the final product-specific sizing guidance before purchase. If unsure, contact PawHaven support with your pet measurements and the product name.",
       },
     ],
   },

@@ -25,7 +25,7 @@ type CartContextValue = {
 };
 
 const CartContext = createContext<CartContextValue | null>(null);
-const cartStorageKey = "pawnest-cart";
+const cartStorageKey = "PawHaven-cart";
 
 function readStoredCart() {
   if (typeof window === "undefined") {

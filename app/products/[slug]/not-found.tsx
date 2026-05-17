@@ -7,8 +7,8 @@ export default function ProductNotFound() {
     <main>
       <PageHeader
         eyebrow="Product not found"
-        title="We could not find that PawNest product."
-        description="The product may have moved, or it may not be part of the current PawNest catalog."
+        title="We could not find that PawHaven product."
+        description="The product may have moved, or it may not be part of the current PawHaven catalog."
       />
       <Section tone="white">
         <div className="not-found-actions">

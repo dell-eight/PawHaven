@@ -38,14 +38,14 @@ export function Footer() {
         <div className="site-footer__top">
           <div className="site-footer__brand">
             <Link className="site-footer__logo" href="/">
-              PawNest
+              PawHaven
             </Link>
             <p>
-              PawNest helps pet parents create cleaner, cozier, and more
+              PawHaven helps pet parents create cleaner, cozier, and more
               practical homes with thoughtfully selected pet accessories.
             </p>
             <p className="site-footer__social-note">
-              Social channels will be linked after PawNest brand accounts are
+              Social channels will be linked after PawHaven brand accounts are
               live.
             </p>
           </div>
@@ -53,7 +53,7 @@ export function Footer() {
           <div className="site-footer__newsletter">
             <NewsletterSignup
               title="Get cozy pet-parent tips and product picks."
-              description="Join PawNest for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
+              description="Join PawHaven for helpful pet home-care tips, new product updates, and cozy essentials for dogs and cats."
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ export function Footer() {
         </div>
 
         <div className="site-footer__bottom">
-          <p>&copy; {new Date().getFullYear()} PawNest. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} PawHaven. All rights reserved.</p>
           <p>No food, supplements, medicine, or risky pet health claims.</p>
         </div>
       </Container>

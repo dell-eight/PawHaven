@@ -6,15 +6,15 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { createSeoMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createSeoMetadata({
-  title: "Contact PawNest",
+  title: "Contact PawHaven",
   description:
-    "Contact PawNest for support with products, order questions, sizing, and choosing practical pet essentials.",
+    "Contact PawHaven for support with products, order questions, sizing, and choosing practical pet essentials.",
   path: "/contact",
 });
 
 const supportTopics = [
   "Choosing the right product or category",
-  "Pet sizing questions for collars, harnesses, beds, and carriers",
+  "Pet sizing questions for beds, carriers, perches, and mats",
   "Shipping and returns policy questions",
   "Catalog, care instruction, or product detail questions",
 ];
@@ -24,8 +24,8 @@ export default function ContactPage() {
     <main>
       <PageHeader
         eyebrow="Support"
-        title="Contact PawNest"
-        description="Have a question about your order, a product, or choosing the right PawNest essential? Send us a message and we'll help as soon as we can."
+        title="Contact PawHaven"
+        description="Have a question about your order, a product, or choosing the right PawHaven essential? Send us a message and we'll help as soon as we can."
       />
 
       <Section tone="white">
@@ -59,7 +59,7 @@ export default function ContactPage() {
           <aside className="support-panel">
             <h2>Support expectations</h2>
             <p>
-              PawNest support should be clear, friendly, and practical. Include
+              PawHaven support should be clear, friendly, and practical. Include
               the product name, order number if available, and any sizing or
               care details that help explain your question.
             </p>
@@ -75,7 +75,7 @@ export default function ContactPage() {
       <Section tone="beige">
         <SectionHeader
           eyebrow="Common support topics"
-          title="Questions PawNest can help with."
+          title="Questions PawHaven can help with."
           description="Use the form for product guidance, sizing checks, care questions, or support policy questions."
         />
         <div className="support-topic-grid">
@@ -91,7 +91,7 @@ export default function ContactPage() {
         <div className="support-faq-cta">
           <div>
             <p className="eyebrow">Need a quick answer?</p>
-            <h2>Start with the PawNest FAQ.</h2>
+            <h2>Start with the PawHaven FAQ.</h2>
             <p>
               Find honest answers about orders, shipping, returns, product
               claims, payments, and pet sizing before sending a message.

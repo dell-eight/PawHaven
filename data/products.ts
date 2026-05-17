@@ -3,18 +3,44 @@ import type { Product } from "@/lib/catalog/types";
 const shippingNote =
   "Shipping estimates will be shown once fulfillment is configured for real orders.";
 
+const hiddenProductIds = new Set([
+  "everyday-no-pull-harness",
+  "pet-toy-storage-basket",
+  "lint-roller-refill-set",
+  "adjustable-pet-leash",
+  "soft-plush-squeaky-toy",
+  "reflective-safety-collar",
+]);
+
+const productDisplayOrder = [
+  "cat-scratching-lounge",
+  "pet-hair-remover-brush",
+  "paw-cleaning-cup",
+  "cozy-cat-window-perch",
+  "portable-water-bottle-for-walks",
+  "cozy-cloud-pet-bed",
+  "waterproof-pet-feeding-mat",
+  "pet-grooming-glove",
+  "foldable-travel-pet-carrier",
+  "washable-pet-blanket",
+  "car-seat-pet-cover",
+  "anti-slip-pet-bowl-mat",
+  "soft-fleece-pet-blanket",
+  "pet-travel-organizer-bag",
+];
+
 export const products: Product[] = [
   {
     id: "cozy-cloud-pet-bed",
-    name: "Cozy Cloud Pet Bed",
+    name: "Cozy Cloud Washable Pet Bed",
     slug: "cozy-cloud-pet-bed",
     category: "cozy-comfort",
     price: 58,
     compareAtPrice: 72,
     shortDescription:
-      "A soft, low-profile bed for everyday lounging in living rooms, bedrooms, and cozy pet corners.",
+      "A plush low-profile bed for cats and small dogs who need a dedicated cozy rest spot.",
     longDescription:
-      "The Cozy Cloud Pet Bed gives dogs and cats a plush place to curl up while keeping the look calm and home-friendly. Its simple shape works well beside sofas, beds, crates, or apartment pet stations.",
+      "The Cozy Cloud Washable Pet Bed gives cats and small dogs a plush place to curl up while keeping the look calm and home-friendly. Its simple shape works well beside sofas, beds, crates, or apartment pet stations.",
     benefits: [
       "Creates a dedicated resting spot",
       "Soft texture for everyday comfort",
@@ -50,15 +76,15 @@ export const products: Product[] = [
   },
   {
     id: "pet-hair-remover-brush",
-    name: "Pet Hair Remover Brush",
+    name: "Reusable Pet Hair Remover Brush",
     slug: "pet-hair-remover-brush",
     category: "grooming-clean-home",
     price: 18,
     compareAtPrice: 24,
     shortDescription:
-      "A reusable brush for lifting loose pet hair from sofas, cushions, blankets, and everyday fabrics.",
+      "A reusable cleaner-home brush for lifting visible pet hair from sofas, cushions, blankets, and everyday fabrics.",
     longDescription:
-      "This pet hair remover brush is made for quick cleanup moments around the home. Keep one near the sofa, laundry area, or entryway to tidy common pet zones without relying on single-use sheets.",
+      "This reusable pet hair remover brush is made for quick cleanup moments around the home. Keep one near the sofa, laundry area, or entryway to tidy common pet zones without relying on single-use sheets.",
     benefits: [
       "Helps tidy fabric surfaces between deeper cleans",
       "Reusable design reduces disposable roller use",
@@ -86,23 +112,23 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: [
-      "lint-roller-refill-set",
       "pet-grooming-glove",
       "washable-pet-blanket",
+      "cozy-cloud-pet-bed",
     ],
     isFeatured: true,
   },
   {
     id: "foldable-travel-pet-carrier",
-    name: "Foldable Travel Pet Carrier",
+    name: "Foldable Soft-Sided Pet Carrier",
     slug: "foldable-travel-pet-carrier",
     category: "walk-travel",
     price: 46,
     compareAtPrice: 59,
     shortDescription:
-      "A soft-sided carrier for easier everyday trips, short outings, and organized pet travel.",
+      "A foldable soft-sided carrier for cats and small dogs on short outings, errands, and planned trips.",
     longDescription:
-      "The Foldable Travel Pet Carrier is designed for practical transport with a lightweight feel and easy storage. It is a helpful pick for errands, visits, and planned outings where a secure carrier is needed.",
+      "The Foldable Soft-Sided Pet Carrier is designed for practical transport with a lightweight feel and easier storage. It is a helpful pick for errands, vet visits, and planned outings where a secure carrier is needed.",
     benefits: [
       "Folds down for easier storage",
       "Keeps travel essentials more organized",
@@ -130,11 +156,10 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: [
-      "pet-travel-organizer-bag",
       "portable-water-bottle-for-walks",
-      "adjustable-pet-leash",
+      "soft-fleece-pet-blanket",
+      "pet-travel-organizer-bag",
     ],
-    isFeatured: true,
   },
   {
     id: "everyday-no-pull-harness",
@@ -181,15 +206,15 @@ export const products: Product[] = [
   },
   {
     id: "waterproof-pet-feeding-mat",
-    name: "Waterproof Pet Feeding Mat",
+    name: "Waterproof Feeding Station Mat",
     slug: "waterproof-pet-feeding-mat",
-    category: "home-organization",
+    category: "grooming-clean-home",
     price: 22,
     compareAtPrice: 28,
     shortDescription:
-      "A wipeable feeding mat that helps define the bowl area and catch everyday drips.",
+      "A wipeable feeding mat that helps catch everyday water drips, crumbs, and bowl-area mess.",
     longDescription:
-      "The Waterproof Pet Feeding Mat is a simple home-care helper for pet feeding stations. Place it under bowls to keep the area easier to wipe down after meals and water breaks.",
+      "The Waterproof Feeding Station Mat is a simple cleaner-home helper for pet feeding stations. Place it under bowls to keep the area easier to wipe down after meals and water breaks.",
     benefits: [
       "Helps contain small spills",
       "Defines a tidy feeding zone",
@@ -217,9 +242,9 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: [
-      "anti-slip-pet-bowl-mat",
-      "pet-toy-storage-basket",
       "paw-cleaning-cup",
+      "pet-hair-remover-brush",
+      "anti-slip-pet-bowl-mat",
     ],
   },
   {
@@ -261,22 +286,22 @@ export const products: Product[] = [
     ],
     relatedProductIds: [
       "cozy-cat-window-perch",
-      "soft-plush-squeaky-toy",
-      "pet-toy-storage-basket",
+      "soft-fleece-pet-blanket",
+      "cozy-cloud-pet-bed",
     ],
     isFeatured: true,
   },
   {
     id: "paw-cleaning-cup",
-    name: "Paw Cleaning Cup",
+    name: "Muddy Paw Cleaning Cup",
     slug: "paw-cleaning-cup",
     category: "grooming-clean-home",
     price: 21,
     compareAtPrice: 27,
     shortDescription:
-      "A simple rinse cup for cleaning muddy paws after walks, park trips, and rainy-day outings.",
+      "A compact rinse cup for muddy paws after rainy walks, park trips, and outdoor breaks.",
     longDescription:
-      "The Paw Cleaning Cup helps make post-walk cleanup more manageable. Add water, gently rinse paws, and dry before your pet heads back into cozy indoor spaces.",
+      "The Muddy Paw Cleaning Cup helps make post-walk cleanup more manageable. Add water, gently rinse paws, and dry before your pet heads back into cozy indoor spaces.",
     benefits: [
       "Supports cleaner entryway routines",
       "Helpful after wet or muddy walks",
@@ -304,22 +329,23 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: [
-      "everyday-no-pull-harness",
-      "adjustable-pet-leash",
       "waterproof-pet-feeding-mat",
+      "pet-hair-remover-brush",
+      "car-seat-pet-cover",
     ],
+    isFeatured: true,
   },
   {
     id: "car-seat-pet-cover",
-    name: "Car Seat Pet Cover",
+    name: "Water-Resistant Car Seat Pet Cover",
     slug: "car-seat-pet-cover",
     category: "walk-travel",
     price: 52,
     compareAtPrice: 68,
     shortDescription:
-      "A practical seat cover for helping protect car seats from pet hair, dirt, and everyday outing mess.",
+      "A water-resistant car seat cover for helping protect seats from pet hair, dirt, and outing mess.",
     longDescription:
-      "This car seat cover is made for pet parents who bring dogs along for errands, weekend visits, and outdoor plans. It helps define a pet-friendly car zone and supports easier cleanup after trips.",
+      "This water-resistant car seat pet cover is made for pet parents who bring dogs along for errands, weekend visits, and outdoor plans. It helps define a pet-friendly car zone and supports easier cleanup after trips.",
     benefits: [
       "Helps protect seats during pet outings",
       "Makes car cleanup more manageable",
@@ -354,15 +380,15 @@ export const products: Product[] = [
   },
   {
     id: "soft-fleece-pet-blanket",
-    name: "Soft Fleece Pet Blanket",
+    name: "Soft Fleece Pet Comfort Blanket",
     slug: "soft-fleece-pet-blanket",
     category: "cozy-comfort",
     price: 24,
     compareAtPrice: 32,
     shortDescription:
-      "A cozy fleece blanket for sofas, beds, crates, carriers, and everyday pet lounging.",
+      "A soft fleece comfort layer for sofas, beds, crates, carriers, and everyday pet lounging.",
     longDescription:
-      "The Soft Fleece Pet Blanket adds an easy comfort layer anywhere your pet likes to rest. Use it over furniture, inside carriers, or as a familiar blanket for cozy corners.",
+      "The Soft Fleece Pet Comfort Blanket adds an easy comfort layer anywhere your pet likes to rest. Use it over furniture, inside carriers, or as a familiar blanket for cozy corners.",
     benefits: [
       "Adds a soft layer to favorite rest spots",
       "Helps define pet-friendly furniture zones",
@@ -521,8 +547,9 @@ export const products: Product[] = [
     relatedProductIds: [
       "cat-scratching-lounge",
       "soft-fleece-pet-blanket",
-      "pet-toy-storage-basket",
+      "cozy-cloud-pet-bed",
     ],
+    isFeatured: true,
   },
   {
     id: "adjustable-pet-leash",
@@ -569,15 +596,15 @@ export const products: Product[] = [
   },
   {
     id: "portable-water-bottle-for-walks",
-    name: "Portable Water Bottle for Walks",
+    name: "Portable Dog Water Bottle",
     slug: "portable-water-bottle-for-walks",
     category: "walk-travel",
     price: 20,
     compareAtPrice: 26,
     shortDescription:
-      "A compact walk bottle with an attached drinking tray style top for outdoor breaks.",
+      "A compact walk bottle with an attached drinking tray for easier water breaks away from home.",
     longDescription:
-      "This portable water bottle is made for walks, park visits, and car outings where a simple drink setup is helpful. Keep it in a walking bag or car caddy for everyday convenience.",
+      "This portable dog water bottle is made for walks, park visits, and car outings where a simple drink setup is helpful. Keep it in a walking bag or car caddy for everyday convenience.",
     benefits: [
       "Makes water breaks easier on outings",
       "Compact for bags and car storage",
@@ -597,7 +624,7 @@ export const products: Product[] = [
     faqs: [
       {
         question: "Is this for food or treats?",
-        answer: "No. PawNest does not sell pet food or treats; this item is for carrying water.",
+        answer: "No. PawHaven does not sell pet food or treats; this item is for carrying water.",
       },
       {
         question: "Can it go in a dishwasher?",
@@ -605,22 +632,23 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: [
-      "adjustable-pet-leash",
-      "everyday-no-pull-harness",
       "pet-travel-organizer-bag",
+      "foldable-travel-pet-carrier",
+      "car-seat-pet-cover",
     ],
+    isFeatured: true,
   },
   {
     id: "pet-grooming-glove",
-    name: "Pet Grooming Glove",
+    name: "Gentle Pet Grooming Glove",
     slug: "pet-grooming-glove",
     category: "grooming-clean-home",
     price: 16,
     compareAtPrice: 21,
     shortDescription:
-      "A soft grooming glove for collecting loose hair during calm brushing routines.",
+      "A gentle grooming glove for collecting loose hair before it lands on sofas, blankets, and clothes.",
     longDescription:
-      "The Pet Grooming Glove is a gentle-feeling tool for everyday coat touch-ups. It is useful for pet parents who want a simple way to collect loose hair before it lands around the home.",
+      "The Gentle Pet Grooming Glove is a soft-feeling tool for everyday coat touch-ups. It is useful for pet parents who want a simple way to collect loose hair before it lands around the home.",
     benefits: [
       "Helps collect loose coat hair",
       "Glove format feels familiar in the hand",
@@ -649,21 +677,21 @@ export const products: Product[] = [
     ],
     relatedProductIds: [
       "pet-hair-remover-brush",
-      "lint-roller-refill-set",
+      "washable-pet-blanket",
       "soft-fleece-pet-blanket",
     ],
   },
   {
     id: "washable-pet-blanket",
-    name: "Washable Pet Blanket",
+    name: "Washable Pet Sofa Blanket",
     slug: "washable-pet-blanket",
     category: "cozy-comfort",
     price: 28,
     compareAtPrice: 36,
     shortDescription:
-      "A washable everyday blanket for pet beds, sofas, crates, and cozy home routines.",
+      "A washable everyday layer for pet beds, sofas, crates, and cozy home routines.",
     longDescription:
-      "The Washable Pet Blanket is a flexible layer for pet-friendly homes. Use it where your pet rests most often, then clean according to the final care label to keep routines simple.",
+      "The Washable Pet Sofa Blanket is a flexible layer for pet-friendly homes. Use it where your pet rests most often, then clean according to the final care label to keep routines simple.",
     benefits: [
       "Adds a washable layer to pet zones",
       "Works across beds, sofas, and crates",
@@ -698,15 +726,15 @@ export const products: Product[] = [
   },
   {
     id: "anti-slip-pet-bowl-mat",
-    name: "Anti-Slip Pet Bowl Mat",
+    name: "Compact Anti-Slip Bowl Mat",
     slug: "anti-slip-pet-bowl-mat",
-    category: "home-organization",
+    category: "grooming-clean-home",
     price: 19,
     compareAtPrice: 24,
     shortDescription:
-      "A compact bowl mat that helps keep feeding stations steady and easier to wipe clean.",
+      "A compact bowl mat that helps keep small feeding stations steadier and easier to wipe clean.",
     longDescription:
-      "The Anti-Slip Pet Bowl Mat is built for small feeding zones, apartment kitchens, and tidy pet corners. Its grip-style base helps bowls feel more settled during everyday meals.",
+      "The Compact Anti-Slip Bowl Mat is built for small feeding zones, apartment kitchens, and tidy pet corners. Its grip-style base helps bowls feel more settled during everyday meals.",
     benefits: [
       "Helps bowls stay more settled",
       "Catches everyday drips and crumbs",
@@ -726,7 +754,7 @@ export const products: Product[] = [
     faqs: [
       {
         question: "Is it for food products?",
-        answer: "No. PawNest does not sell food or treats; this is a mat for bowl areas.",
+        answer: "No. PawHaven does not sell food or treats; this is a mat for bowl areas.",
       },
       {
         question: "Can it go on hardwood floors?",
@@ -734,9 +762,9 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: [
-      "waterproof-pet-feeding-mat",
-      "pet-toy-storage-basket",
       "paw-cleaning-cup",
+      "waterproof-pet-feeding-mat",
+      "pet-hair-remover-brush",
     ],
   },
   {
@@ -773,7 +801,7 @@ export const products: Product[] = [
       },
       {
         question: "Can it hold food or treats?",
-        answer: "PawNest does not sell food or treats. Use the bag for allowed accessories and follow final care guidance.",
+        answer: "PawHaven does not sell food or treats. Use the bag for allowed accessories and follow final care guidance.",
       },
     ],
     relatedProductIds: [
@@ -871,16 +899,41 @@ export const products: Product[] = [
   },
 ];
 
+export function isPublicProduct(product: Product) {
+  return !hiddenProductIds.has(product.id);
+}
+
+export function getPublicProducts() {
+  const publicProducts = products.filter(isPublicProduct);
+
+  return productDisplayOrder
+    .map((id) => publicProducts.find((product) => product.id === id))
+    .filter((product): product is Product => Boolean(product))
+    .concat(
+      publicProducts.filter(
+        (product) => !productDisplayOrder.includes(product.id),
+      ),
+    );
+}
+
 export function getProductBySlug(slug: string) {
-  return products.find((product) => product.slug === slug);
+  const product = products.find((catalogProduct) => catalogProduct.slug === slug);
+
+  if (!product || !isPublicProduct(product)) {
+    return undefined;
+  }
+
+  return product;
 }
 
 export function getProductsByCategory(category: Product["category"]) {
-  return products.filter((product) => product.category === category);
+  return getPublicProducts().filter((product) => product.category === category);
 }
 
 export function getRelatedProducts(product: Product) {
   return product.relatedProductIds
     .map((id) => products.find((relatedProduct) => relatedProduct.id === id))
-    .filter((relatedProduct): relatedProduct is Product => Boolean(relatedProduct));
+    .filter((relatedProduct): relatedProduct is Product =>
+      Boolean(relatedProduct && isPublicProduct(relatedProduct)),
+    );
 }

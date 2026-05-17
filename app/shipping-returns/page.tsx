@@ -8,18 +8,18 @@ import { createSeoMetadata } from "@/lib/seo";
 export const metadata: Metadata = createSeoMetadata({
   title: "Shipping and Returns",
   description:
-    "Read PawNest shipping and returns guidance, including processing, delivery estimates, tracking, delays, return eligibility, refunds, and support.",
+    "Read PawHaven shipping and returns guidance, including processing, delivery estimates, tracking, delays, return eligibility, refunds, and support.",
   path: "/shipping-returns",
 });
 
 const shippingSections = [
   {
     title: "Shipping overview",
-    copy: "PawNest aims to keep shipping information clear before any real order is placed. Delivery times may vary depending on the product, supplier, and destination.",
+    copy: "PawHaven aims to keep shipping information clear before any real order is placed. Delivery times may vary depending on the product, supplier, and destination.",
   },
   {
     title: "Processing times",
-    copy: "Processing starts after an order is accepted by the store and payment is confirmed. Processing windows should be finalized once PawNest fulfillment partners are configured.",
+    copy: "Processing starts after an order is accepted by the store and payment is confirmed. Processing windows should be finalized once PawHaven fulfillment partners are configured.",
   },
   {
     title: "Estimated delivery times",
@@ -31,14 +31,14 @@ const shippingSections = [
   },
   {
     title: "Delays",
-    copy: "Delays can happen because of carrier volume, weather, supplier processing, address issues, holidays, customs, or other events outside PawNest control.",
+    copy: "Delays can happen because of carrier volume, weather, supplier processing, address issues, holidays, customs, or other events outside PawHaven control.",
   },
 ];
 
 const returnSections = [
   {
     title: "Returns overview",
-    copy: "PawNest return rules should be reviewed before launch. The goal is to keep returns fair, simple, and clear before customers complete a real purchase.",
+    copy: "PawHaven return rules should be reviewed before launch. The goal is to keep returns fair, simple, and clear before customers complete a real purchase.",
   },
   {
     title: "Return eligibility",
@@ -54,7 +54,7 @@ const returnSections = [
   },
   {
     title: "Refund process",
-    copy: "Refund timing depends on the final payment provider and review process. PawNest should not promise refund timing until the payment and returns workflow is configured.",
+    copy: "Refund timing depends on the final payment provider and review process. PawHaven should not promise refund timing until the payment and returns workflow is configured.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function ShippingReturnsPage() {
       <PageHeader
         eyebrow="Policies"
         title="Shipping and Returns"
-        description="Clear, flexible shipping and return guidance for PawNest customers. This policy page should be finalized before accepting real orders."
+        description="Clear, flexible shipping and return guidance for PawHaven customers. This policy page should be finalized before accepting real orders."
       />
 
       <Section tone="white">
@@ -73,7 +73,7 @@ export default function ShippingReturnsPage() {
           <h2>Fulfillment details are not final yet.</h2>
           <p>
             Checkout, payment, suppliers, shipping rates, delivery estimates,
-            and return handling must be configured and reviewed before PawNest
+            and return handling must be configured and reviewed before PawHaven
             accepts real orders.
           </p>
         </div>
@@ -83,7 +83,7 @@ export default function ShippingReturnsPage() {
         <SectionHeader
           eyebrow="Shipping"
           title="Shipping should be clear before checkout."
-          description="Because PawNest may work with supplier fulfillment, shipping language stays flexible and honest until product-level details are confirmed."
+          description="Because PawHaven may work with supplier fulfillment, shipping language stays flexible and honest until product-level details are confirmed."
         />
         <div className="policy-grid">
           {shippingSections.map((section) => (
@@ -99,7 +99,7 @@ export default function ShippingReturnsPage() {
         <SectionHeader
           eyebrow="Returns"
           title="Returns should feel fair, simple, and transparent."
-          description="PawNest should explain return eligibility, damaged item handling, and refund expectations clearly before launch."
+          description="PawHaven should explain return eligibility, damaged item handling, and refund expectations clearly before launch."
         />
         <div className="policy-grid">
           {returnSections.map((section) => (
@@ -115,7 +115,7 @@ export default function ShippingReturnsPage() {
         <div className="policy-support">
           <div>
             <p className="eyebrow">Need help?</p>
-            <h2>Contact PawNest support with product or order details.</h2>
+            <h2>Contact PawHaven support with product or order details.</h2>
             <p>
               Include your order number if available, the product name, photos
               for damaged or incorrect items, and a clear description of what
@@ -128,7 +128,7 @@ export default function ShippingReturnsPage() {
 
       <CtaSection
         eyebrow="Keep shopping carefully"
-        title="Review product details before choosing a PawNest essential."
+        title="Review product details before choosing a PawHaven essential."
         description="Check sizing, care instructions, product notes, and shipping language before ordering once checkout is active."
         actions={
           <>
