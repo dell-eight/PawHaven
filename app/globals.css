@@ -1874,6 +1874,42 @@ svg {
   padding: 0.85rem;
 }
 
+.cart-summary__customer {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.cart-summary__customer label {
+  color: var(--color-brown-900);
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
+.cart-summary__customer input {
+  min-height: 2.75rem;
+  width: 100%;
+  border: 1px solid rgba(217, 185, 149, 0.86);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-brown-900);
+  padding: 0.7rem 0.8rem;
+}
+
+.cart-summary__customer input:focus {
+  border-color: var(--color-sage-500);
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(124, 154, 114, 0.16);
+}
+
+.cart-summary__error {
+  border: 1px solid rgba(143, 71, 54, 0.24);
+  border-radius: var(--radius-md);
+  background: rgba(255, 228, 214, 0.62);
+  color: var(--color-brown-900);
+  font-weight: 800;
+  padding: 0.75rem 0.85rem;
+}
+
 .cart-summary__actions {
   display: grid;
   gap: 0.75rem;

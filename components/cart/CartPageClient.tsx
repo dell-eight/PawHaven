@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { useCart } from "@/components/cart/CartProvider";
 import { ProductVisual } from "@/components/ui/ProductVisual";
@@ -10,6 +11,10 @@ import { formatPrice } from "@/lib/pricing";
 
 export function CartPageClient() {
   const { clearCart, items, removeItem, setQuantity } = useCart();
+  const [customerEmail, setCustomerEmail] = useState("");
+  const [customerName, setCustomerName] = useState("");
+  const [checkoutError, setCheckoutError] = useState("");
+  const [isRedirecting, setIsRedirecting] = useState(false);
   const cartProducts = items
     .map((item) => {
       const product = products.find(
@@ -24,6 +29,51 @@ export function CartPageClient() {
     (total, item) => total + item.product.price * item.quantity,
     0,
   );
+
+  async function handleCheckout() {
+    if (cartProducts.length === 0 || isRedirecting) {
+      return;
+    }
+
+    setCheckoutError("");
+    setIsRedirecting(true);
+
+    try {
+      const response = await fetch("/api/paymongo/create-checkout", {
+        body: JSON.stringify({
+          customer: {
+            email: customerEmail,
+            name: customerName,
+          },
+          items: cartProducts.map((item) => ({
+            productId: item.productId,
+            quantity: item.quantity,
+          })),
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+      const payload = await response.json();
+
+      if (!response.ok || typeof payload.checkoutUrl !== "string") {
+        throw new Error(
+          payload.error ??
+            "We couldn't start checkout. Please try again or contact support.",
+        );
+      }
+
+      window.location.assign(payload.checkoutUrl);
+    } catch (error) {
+      setCheckoutError(
+        error instanceof Error
+          ? error.message
+          : "We couldn't start checkout. Please try again or contact support.",
+      );
+      setIsRedirecting(false);
+    }
+  }
 
   if (cartProducts.length === 0) {
     return (
@@ -119,14 +169,46 @@ export function CartPageClient() {
           Estimated shipping details are being finalized with the checkout and
           fulfillment flow.
         </p>
-        <Button disabled fullWidth type="button">
-          Checkout
+        <div className="cart-summary__customer">
+          <label htmlFor="checkout-name">Name optional</label>
+          <input
+            autoComplete="name"
+            id="checkout-name"
+            name="name"
+            onChange={(event) => setCustomerName(event.target.value)}
+            placeholder="Your name"
+            type="text"
+            value={customerName}
+          />
+          <label htmlFor="checkout-email">Email optional</label>
+          <input
+            autoComplete="email"
+            id="checkout-email"
+            name="email"
+            onChange={(event) => setCustomerEmail(event.target.value)}
+            placeholder="you@example.com"
+            type="email"
+            value={customerEmail}
+          />
+        </div>
+        <Button
+          disabled={isRedirecting}
+          fullWidth
+          onClick={handleCheckout}
+          type="button"
+        >
+          {isRedirecting ? "Redirecting to secure checkout..." : "Checkout"}
         </Button>
         <p className="cart-summary__checkout-note">
-          PawHaven is currently preparing its full checkout experience. Product
-          pages are available for browsing while payment and fulfillment details
-          are finalized.
+          Payments are securely processed through PayMongo. Available payment
+          methods may include GCash, Maya, cards, QRPh, and other
+          PayMongo-supported options depending on checkout availability.
         </p>
+        {checkoutError ? (
+          <p className="cart-summary__error" role="alert">
+            {checkoutError}
+          </p>
+        ) : null}
         <div className="cart-summary__actions">
           <ButtonLink href="/shop" fullWidth variant="secondary">
             Continue Shopping
