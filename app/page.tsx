@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import { CategoryCard } from "@/components/ui/CategoryCard";
 import { CtaSection } from "@/components/ui/CtaSection";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { HeroSection } from "@/components/ui/hero-section-2";
 import { NewsletterSignup } from "@/components/ui/NewsletterSignup";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { ReviewCard } from "@/components/ui/ReviewCard";
@@ -176,48 +176,28 @@ const faqItems = [
 export default function Home() {
   return (
     <main>
-      <section className="home-hero" aria-labelledby="home-hero-title">
-        <div className="container home-hero__inner">
-          <div className="home-hero__copy">
-            <p className="eyebrow">Cozy essentials for happier pets and cleaner homes</p>
-            <h1 id="home-hero-title">
-              Practical pet essentials for cleaner homes and happier pets.
-            </h1>
-            <p>
-              PawHaven curates comfort, cleanup, cat essentials, and walk-ready
-              accessories for everyday pet life in the Philippines.
-            </p>
-            <div className="home-hero__actions">
-              <ButtonLink href="/shop">Shop Best Picks</ButtonLink>
-              <ButtonLink href="/categories" variant="secondary">
-                Explore Pet Routines
-              </ButtonLink>
-            </div>
-            <div className="home-hero__promises" aria-label="PawHaven promises">
-              {heroPromises.map((promise) => (
-                <span key={promise}>{promise}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className="home-hero__visual" aria-label="PawHaven home scene">
-            <div className="home-hero__scene">
-              <Image
-                alt="Cozy living room with a cat and dog relaxing at home"
-                className="home-hero__image"
-                fill
-                priority
-                sizes="(min-width: 56rem) 44vw, 100vw"
-                src="/images/landing/cozy-pet-home-hero.jpg"
-              />
-              <div className="home-hero__note">
-                <strong>Thoughtful pet-home picks</strong>
-                <span>No food, medicine, or risky claims.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        actions={[
+          { href: "/shop", label: "Shop Best Picks" },
+          {
+            href: "/categories",
+            label: "Explore Pet Routines",
+            variant: "secondary",
+          },
+        ]}
+        eyebrow="Cozy essentials for happier pets and cleaner homes"
+        image={{
+          alt: "Cozy living room with a cat and dog relaxing at home",
+          src: "/images/landing/cozy-pet-home-hero.jpg",
+        }}
+        note={{
+          body: "No food, medicine, or risky claims.",
+          title: "Thoughtful pet-home picks",
+        }}
+        promises={heroPromises}
+        subtitle="PawHaven curates comfort, cleanup, cat essentials, and walk-ready accessories for everyday pet life in the Philippines."
+        title="Practical pet essentials for cleaner homes and happier pets."
+      />
 
       <Section tone="beige" className="home-trust">
         <TrustBadgeList

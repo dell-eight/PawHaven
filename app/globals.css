@@ -2897,14 +2897,30 @@ svg {
 
 .home-hero__inner {
   display: grid;
-  align-items: center;
+  align-items: stretch;
   gap: clamp(2rem, 6vw, 4rem);
 }
 
 .home-hero__copy {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.1rem;
+  justify-content: space-between;
   max-width: 47rem;
+  min-height: clamp(22rem, 50vw, 35rem);
+}
+
+.home-hero__content {
+  display: grid;
+  align-content: center;
+  gap: 1.1rem;
+}
+
+.home-hero__rule {
+  width: 5rem;
+  height: 0.25rem;
+  border-radius: 999px;
+  background: var(--color-sage-500);
 }
 
 .home-hero h1 {
@@ -2948,11 +2964,14 @@ svg {
 
 .home-hero__visual {
   min-height: 22rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
 .home-hero__scene {
   position: relative;
   overflow: hidden;
+  height: 100%;
   min-height: clamp(22rem, 58vw, 35rem);
   border: 1px solid rgba(217, 185, 149, 0.78);
   border-radius: var(--radius-lg);
@@ -3495,10 +3514,21 @@ svg {
   .home-hero__visual {
     min-height: 0;
   }
+
+  .home-hero__copy {
+    min-height: 0;
+  }
+
+  .home-hero__content {
+    align-content: start;
+  }
 }
 
 @media (min-width: 56rem) {
-  .home-hero__inner,
+  .home-hero__inner {
+    grid-template-columns: minmax(0, 3fr) minmax(20rem, 2fr);
+  }
+
   .home-split,
   .home-criteria,
   .home-bundle {
